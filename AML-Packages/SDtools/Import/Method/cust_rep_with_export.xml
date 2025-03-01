@@ -1,0 +1,118 @@
+﻿<AML>
+ <Item type="Method" id="4432A3BAF3EE40BD8214149158C38AC7" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[
+var innov=this.getInnovator();
+// call report from server
+var qry1=this.newItem("DatabaseUpgrade");
+qry1.setID(this.getID());
+qry1=qry1.apply("ConfigurationReport");
+
+
+// style result to window content
+var qry2=innov.getItemByKeyedName("Report","Configuration Report");
+if (!qry2) {top.aras.AlertError("Failed to get Report"); return;}
+var ss=qry2.getProperty("xsl_stylesheet");
+var content= qry1.applyStylesheet(ss,"text");
+//debugger;
+// open window passing aras object and 
+var win=top.open();
+// write content to window
+
+win.document.write(content);
+
+win.document.go = function()
+{
+	var innov=top.aras.newIOMInnovator();
+	var itm=innov.newItem("PEs");
+	// write clientUpgradeControl to Window, this is shared code
+	top.aras.evalMethod("writeClientUpgradeToWindow","<Item />");
+	// find the rows that are checked
+	var table= win.document.getElementById("table1");
+	var all_rows=table.getElementsByTagName("tr");
+	for (var i=1;i<all_rows.length-1;i++)
+	{
+		var this_row=all_rows[i];
+		var cols=this_row.getElementsByTagName("td");
+		if (cols[7].childNodes[1] &&cols[7].childNodes[1].checked)
+		{
+			var this_id=this_row.getAttribute("id");
+			var this_pd=cols[0].innerText;
+			var this_type=cols[1].innerText;
+			if (this_type==="RelationshipType (ItemType)") {type="RelationshipType";}
+			var this_kn=cols[2].innerText;
+			var new_row=top.aras.newIOMItem("PE");
+			new_row.setID(this_id);
+			new_row.setProperty("pd",this_pd);
+			new_row.setProperty("pg",this_type);
+			new_row.setProperty("kn",this_kn);
+			itm.addRelationship(new_row);
+		}
+	 }
+	// create url, db and  credentials to be used by clientUpgrade to do the export
+	var base_url=top.aras.getServerBaseURL();
+	base_url=base_url.replace("/Server","");
+	var db=top.aras.getDatabase();
+	var user="root";
+	var pw="innovator";
+	// get the vault control for writing files to client
+	var main_wnd=top.aras.getMainWindow();
+	var vault=main_wnd.aras.vault;
+	var mf_text="";
+	var folder=vault.selectFolder();
+	// login for clientUpgrade
+	var cu=main_wnd.clientUpgrade;
+	cu.login(base_url,db,user,pw,folder);
+	
+	rows=itm.getRelationships("PE");
+	
+	for (i=0;i<rows.getItemCount();i++)
+	{
+		this_row=rows.getItemByIndex(i);
+		this_id=this_row.getID();
+		this_pd=this_row.getProperty("pd");
+		var this_pd_folder=this_pd.replace("com.aras.innovator.solution.","");
+		this_type=this_row.getProperty("pg");
+		if (this_type==="RelationshipType (ItemType)") {this_type="RelationshipType";}
+		this_kn=this_row.getProperty("kn");
+		var this_folder=folder+"\\"+this_pd_folder+"\\Import\\";
+		cu.setfolder(this_folder);
+		cu.packageItem(this_id, this_kn, this_type, this_pd );
+		if (mf_text.indexOf(this_pd)<0)
+		{ 
+		   mf_text+=" <package name='"+this_pd+"' path='"+this_pd_folder+"\\Import\\' />\r\n";
+		}
+	}
+	mf_text="<imports>\r\n"+mf_text+"</imports>\r\n";
+	ok = vault.WriteText(folder+"\\imports.mf",mf_text);
+	if (!ok) { top.aras.AlertError("Error writing file manifest file");}
+	
+	top.aras.AlertSuccess("UserStory exported successfully");
+
+}; 
+
+win.document.chselect = function(c)
+{
+//debugger;
+	var check=c;
+	var table= win.document.getElementById("table1");
+	var rows=table.getElementsByTagName("tr");
+	for (var i=1;i<rows.length-1;i++)
+	{
+	  var this_row=rows[i];
+		var cols=this_row.getElementsByTagName("td");
+	  if (cols[7].childNodes[1])
+		{
+			cols[7].childNodes[1].checked=check;
+		}
+  }
+};
+
+win.aras=top.aras;
+
+// return something to avoid aras client report error
+return "";]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cust_rep_with_export</name>
+ </Item>
+</AML>

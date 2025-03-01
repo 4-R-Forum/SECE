@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="gn_NodeType" id="F1A3ACBD118A4E429D37AC377264B8AE" action="add">
+  <itemtype_id keyed_name="CAD" type="ItemType" name="CAD">CCF205347C814DD1AF056875E0A880AC</itemtype_id>
+  <name>CAD_sys_SystemElement</name>
+  <Relationships>
+   <Item type="gn_NodeTypeProperty" id="4CB1F2D116EB426381B000F1DE3EC554" action="add">
+    <name>icon</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</source_id>
+    <value_template>{@icon}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="2DB8F73DED914141985D2206450BB935" action="add">
+    <name>keyed_name</name>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</source_id>
+    <value_template>{keyed_name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="DF9E411A29D34700A8608C49B6861324" action="add">
+    <name>classification</name>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</source_id>
+    <value_template>{classification}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="9F2784E25B0D4035BD8A09C3236FFAEF" action="add">
+    <name>name</name>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</source_id>
+    <value_template>{name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="DEE942E78C9944719EDCF479A5E3B4D2" action="add">
+    <name>version</name>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</source_id>
+    <value_template>{major_rev}.{generation}</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

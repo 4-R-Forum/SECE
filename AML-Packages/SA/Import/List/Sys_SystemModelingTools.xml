@@ -1,0 +1,49 @@
+﻿<AML>
+ <Item type="List" id="3E3F5B1128FA4A389B40D1F3C5409E8B" action="add">
+  <name>Sys_SystemModelingTools</name>
+  <Relationships>
+   <Item type="Value" id="6A890F66A942415384ECA016D876FE5A" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Cameo SM /MagicDraw</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>Cameo SM /MagicDraw</value>
+   </Item>
+   <Item type="Value" id="BE9476E8B55A4172AE4A7E501AD5326E" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Enterprise Architect</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>Enterprise Architect</value>
+   </Item>
+   <Item type="Value" id="E77FB3ACEFB24A70A483D0D1B925E581" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">IBM Rhapsody</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>IBM Rhapsody</value>
+   </Item>
+   <Item type="Value" id="2BCA7FDED4AB449BA03A8543A5509BC6" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Vitech Genesys</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>Vitech Genesys</value>
+   </Item>
+   <Item type="Value" id="085AA2FF13664E5CBB5CEC6AD138B615" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Capella</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>Capella</value>
+   </Item>
+   <Item type="Value" id="1C1357ECCEB647C4BEE01ED6B8CBC4E1" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">PTC Integrity Modeler</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="Sys_SystemModelingTools" type="List">3E3F5B1128FA4A389B40D1F3C5409E8B</source_id>
+    <value>PTC Integrity Modeler</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

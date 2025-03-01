@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="Method" id="5E665766755E433C9432B1DBE899CC40" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var innov=this.getInnovator();
+var tz=innov.getItemByKeyedName("Variable","CorporateTimeZone");
+if (tz===null)
+{
+    aras.AlertError("Please set CorporateTimeZone Variable to run Configuration Report");
+    return;
+}
+
+// call report from server
+var qry1=this.newItem("DatabaseUpgrade");
+qry1.setID(this.getID());
+qry1=qry1.apply("ConfigurationReport");
+
+
+// style result to window content
+var qry2=innov.getItemByKeyedName("Report","Configuration Report");
+if (!qry2) {top.aras.AlertError("Failed to get Report"); return;}
+var ss=qry2.getProperty("xsl_stylesheet");
+var content= qry1.applyStylesheet(ss,"text");
+var win=top.open();
+win.document.write(content);
+
+
+return "";]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>config_report_client</name>
+ </Item>
+</AML>

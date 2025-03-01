@@ -1,0 +1,106 @@
+﻿<AML>
+ <Item type="gn_GraphViewDefinition" id="907091967D6D4324BE168A94C0885A56" action="add">
+  <auto_expand_levels>0</auto_expand_levels>
+  <description>Default GraphView Definition for System</description>
+  <query_definition_id keyed_name="sys_System" type="qry_QueryDefinition">5EBBFF497F3C4C259431C72F615A2A66</query_definition_id>
+  <name>System Graph View</name>
+  <Relationships>
+   <Item type="gn_GraphViewConnector" id="DBE1ED90C0A74F83877F8540CE656218" action="add">
+    <connector_type_id keyed_name="sys_System_File_sys_System_1" type="gn_ConnectorType">7F8653D2571C4E57826F2793FCD7098F</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_System Files" type="qry_QueryItem">1BC4A37F4EF94CB48A25DD530AB93FE7</end_query_item_id>
+    <int_query_reference_path>03B5B8B745D04AFEAA2539F0E23AA191/AB7DEBC358AA4A1389E716C40590D221</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>128</sort_order>
+    <source_endpoint_id keyed_name="A1013182A38A4F54AB737C676009C827" type="gn_GraphViewNode">A1013182A38A4F54AB737C676009C827</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_System Files" type="qry_QueryItem">1BC4A37F4EF94CB48A25DD530AB93FE7</start_query_item_id>
+    <target_endpoint_id keyed_name="78650C220B4D4E54BE34FED95BD0C494" type="gn_GraphViewNode">78650C220B4D4E54BE34FED95BD0C494</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="2FF9DA822C7845099D3592787B18F8EB" action="add">
+    <connector_type_id keyed_name="sys_System_sys_SystemElement_sys_System_1" type="gn_ConnectorType">0285B7359BFA4AE2898B6F7F095E756B</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_System Breakdown" type="qry_QueryItem">2CCDAF7591A54342ACCA071D745FDD2A</end_query_item_id>
+    <int_query_reference_path>86E37356C9B24CBEA080F24E13CDCAA3/056387F2D6374C8EA64EBDFE65AFBA8F</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>256</sort_order>
+    <source_endpoint_id keyed_name="A1013182A38A4F54AB737C676009C827" type="gn_GraphViewNode">A1013182A38A4F54AB737C676009C827</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_System Breakdown" type="qry_QueryItem">2CCDAF7591A54342ACCA071D745FDD2A</start_query_item_id>
+    <target_endpoint_id keyed_name="F6B88E4E3CCC4A4183CC974DB44C1232" type="gn_GraphViewNode">F6B88E4E3CCC4A4183CC974DB44C1232</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="6572ECC4E8E34124969AB7C7FF9A4EA4" action="add">
+    <connector_type_id keyed_name="sys_SystemElement_Part_sys_System_1" type="gn_ConnectorType">20F095A7163C407FB37A31FB83730558</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_SystemElement Part" type="qry_QueryItem">9910B1D009C241ED999917CD05F387C5</end_query_item_id>
+    <int_query_reference_path>5CBCB11D2E8E4E8981132E28591B6C22/1172746F3D1C4DA7B54E1B059058811E</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>384</sort_order>
+    <source_endpoint_id keyed_name="F6B88E4E3CCC4A4183CC974DB44C1232" type="gn_GraphViewNode">F6B88E4E3CCC4A4183CC974DB44C1232</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_SystemElement Part" type="qry_QueryItem">9910B1D009C241ED999917CD05F387C5</start_query_item_id>
+    <target_endpoint_id keyed_name="18C162293EBA4ECD9CF46488AEBCB50A" type="gn_GraphViewNode">18C162293EBA4ECD9CF46488AEBCB50A</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="68128D11BDF44E0C98C9FFBD33316A4A" action="add">
+    <connector_type_id keyed_name="sys_SystemElement_sys_SystemElement_sys_System_1" type="gn_ConnectorType">E1C0DAA87CE644D382A80C14FE92E06D</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_SystemElement Structure" type="qry_QueryItem">8BB729144BC0448488377194DAA75716</end_query_item_id>
+    <int_query_reference_path>FCC14C3C24EB4493B09839E07B346E5C/024D5C74797C4CC493470D4D230DE849</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>512</sort_order>
+    <source_endpoint_id keyed_name="F6B88E4E3CCC4A4183CC974DB44C1232" type="gn_GraphViewNode">F6B88E4E3CCC4A4183CC974DB44C1232</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_SystemElement Structure" type="qry_QueryItem">8BB729144BC0448488377194DAA75716</start_query_item_id>
+    <target_endpoint_id keyed_name="F6B88E4E3CCC4A4183CC974DB44C1232" type="gn_GraphViewNode">F6B88E4E3CCC4A4183CC974DB44C1232</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="5D0B150C44884AE0B61994B0A4D9C283" action="add">
+    <connector_type_id keyed_name="sys_SystemElement_sys_Function_sys_System_1" type="gn_ConnectorType">FEE29B3F07D84BFD8915D53D6897AEC8</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_Func SystemElement" type="qry_QueryItem">20C81B1ED0F34640A1A9E9D6B986D9FA</end_query_item_id>
+    <int_query_reference_path>2274CE99B8CD411CBFC2E6C1FAF94DB7/663010E5AC5D45AF8F67E5A7FC497709</int_query_reference_path>
+    <is_incoming>1</is_incoming>
+    <sort_order>640</sort_order>
+    <source_endpoint_id keyed_name="96FF081D4EFA4095967AD72C9B300C1C" type="gn_GraphViewNode">96FF081D4EFA4095967AD72C9B300C1C</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_Func SystemElement" type="qry_QueryItem">20C81B1ED0F34640A1A9E9D6B986D9FA</start_query_item_id>
+    <target_endpoint_id keyed_name="F6B88E4E3CCC4A4183CC974DB44C1232" type="gn_GraphViewNode">F6B88E4E3CCC4A4183CC974DB44C1232</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="575327454E3A49BD81158AC8F2C91A1E" action="add">
+    <connector_type_id keyed_name="Part_CAD_sys_System_1" type="gn_ConnectorType">4D7220FF14F146C09203CFAD5FF7D96A</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="Part CAD" type="qry_QueryItem">E0DFE09FF6B647FB9CE8D39EBE3F5E43</end_query_item_id>
+    <int_query_reference_path>B0BBFFE2E620496C936223065E4B546F/60B292E590754AEC83C1F54AFEF551AA</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>768</sort_order>
+    <source_endpoint_id keyed_name="18C162293EBA4ECD9CF46488AEBCB50A" type="gn_GraphViewNode">18C162293EBA4ECD9CF46488AEBCB50A</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="Part CAD" type="qry_QueryItem">E0DFE09FF6B647FB9CE8D39EBE3F5E43</start_query_item_id>
+    <target_endpoint_id keyed_name="5C858A6296D14CDF97A5793C25C6C453" type="gn_GraphViewNode">5C858A6296D14CDF97A5793C25C6C453</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="F600AE7D64214C968AC6BDC8D85EA47F" action="add">
+    <connector_type_id keyed_name="sys_Function_sys_Function_sys_System_1" type="gn_ConnectorType">77D59296D4CE42E49AC079430537D504</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_Function Structure" type="qry_QueryItem">5A761219DEC742919F45FBECBFEDD399</end_query_item_id>
+    <int_query_reference_path>DD586F6C2BF94C86AC9CAB9059C3F46F/08E8CB570B114FCE9DE89B3A75278601</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>896</sort_order>
+    <source_endpoint_id keyed_name="96FF081D4EFA4095967AD72C9B300C1C" type="gn_GraphViewNode">96FF081D4EFA4095967AD72C9B300C1C</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_Function Structure" type="qry_QueryItem">5A761219DEC742919F45FBECBFEDD399</start_query_item_id>
+    <target_endpoint_id keyed_name="96FF081D4EFA4095967AD72C9B300C1C" type="gn_GraphViewNode">96FF081D4EFA4095967AD72C9B300C1C</target_endpoint_id>
+   </Item>
+   <Item type="gn_GraphViewConnector" id="F414501B7BA74065B308A4997BFBC41B" action="add">
+    <connector_type_id keyed_name="System_sys_System_sys_Function" type="gn_ConnectorType">5035FAECDFF241989909473780C42A26</connector_type_id>
+    <connector_view_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</connector_view_id>
+    <end_query_item_id keyed_name="sys_Func SystemElement" type="qry_QueryItem">20C81B1ED0F34640A1A9E9D6B986D9FA</end_query_item_id>
+    <int_query_reference_path>86E37356C9B24CBEA080F24E13CDCAA3/056387F2D6374C8EA64EBDFE65AFBA8F/2274CE99B8CD411CBFC2E6C1FAF94DB7/663010E5AC5D45AF8F67E5A7FC497709</int_query_reference_path>
+    <is_incoming>0</is_incoming>
+    <sort_order>1024</sort_order>
+    <source_endpoint_id keyed_name="A1013182A38A4F54AB737C676009C827" type="gn_GraphViewNode">A1013182A38A4F54AB737C676009C827</source_endpoint_id>
+    <source_id keyed_name="System Graph View" type="gn_GraphViewDefinition">907091967D6D4324BE168A94C0885A56</source_id>
+    <start_query_item_id keyed_name="sys_System Breakdown" type="qry_QueryItem">2CCDAF7591A54342ACCA071D745FDD2A</start_query_item_id>
+    <target_endpoint_id keyed_name="96FF081D4EFA4095967AD72C9B300C1C" type="gn_GraphViewNode">96FF081D4EFA4095967AD72C9B300C1C</target_endpoint_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

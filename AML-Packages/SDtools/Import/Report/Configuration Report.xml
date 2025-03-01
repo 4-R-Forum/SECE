@@ -1,0 +1,208 @@
+﻿<AML>
+ <Item type="Report" id="23C3B9410FCC4B0881DBED609120AEE0" action="add">
+  <description />
+  <label xml:lang="en">Configuration Report</label>
+  <location>client</location>
+  <method keyed_name="config_report_client" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>config_report_client</name>
+   </Item>
+  </method>
+  <report_query><![CDATA[<!-- Query defined in method -->]]></report_query>
+  <target>none</target>
+  <type>item</type>
+  <xsl_stylesheet><![CDATA[<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:user-scripts" xmlns:aras="http://www.aras.com" version="1.0">
+	  <xsl:output method="xml" omit-xml-declaration="yes" standalone="yes" indent="yes" cdata-section-elements="script msxsl:script"/>
+	  <xsl:template match="/">
+		    <html>
+			      <head>
+				        <title>Configuration Report</title>
+			      </head>
+			      <style>
+				        td {font-family:Arial; font-size:8pt; padding-left:5px; padding-right:5px; border-width:1;border-style:solid;}
+				        th {font-family:Arial; font-size:8pt; border-style:solid; border-width:1; padding-right:5px; padding-left:5px; text-align:center;}
+				        table {width: 750px; empty-cells:show; border-collapse:collapse; border-style:solid; border-width:1}
+			      </style>
+			      <style type="text/css" userData="Global">
+				        .cellSolid {
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidTopRight {
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        }
+				        .cellSolidTopLeft {
+				        border-top:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidRightBottom {
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        }
+				        .cellSolidBottomLeft {
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidTop {
+				        border-top:1px #000000 solid;
+				        }
+				        .cellSolidRight {
+				        border-right:1px #000000 solid;
+				        }
+				        .cellSolidBottom {
+				        border-bottom:1px #000000 solid;
+				        }
+				        .cellSolidLeft {
+				        border-left:1px #000000 solid;
+				        }
+				        .cellDashed {
+				        border-top:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        border-bottom:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedTopRight {
+				        border-top:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedTopLeft {
+				        border-top:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedBottomRight {
+				        border-bottom:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedBottomLeft {
+				        border-bottom:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedTop {
+				        border-top:1px #666666 dashed;
+				        }
+				        .cellDashedRight {
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedBottom {
+				        border-bottom:1px #666666 dashed;
+				        }
+				        .cellDashedLeft {
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellHeader {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        padding:2px;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+				        .cellHeaderVertBT {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        padding:2px;
+				        writing-mode:tb-rl;filter: flipv fliph;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+				        .cellHeaderVertTB {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        padding:2px;
+				        writing-mode:tb-rl;filter: flipv flipv;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+			      </style>
+			      <body>
+				        <!--<script src="../customer/chselect.js"></script>
+				-->
+				        <div style="font-family:Arial; font-size:8pt">
+					          <b>
+						            CUSTOMIZATION REPORT for database            "
+						            <xsl:value-of select="//Item[@type='Header']/db"/>
+						            ",
+						            showing changes since            <xsl:value-of select="//Item[@type='Header']/applied_on"/>
+						            . Note: All datetimes are in Corporate Time.
+					          </b>
+					          <p/>
+				        </div>
+				        <table id="table1" style="display:inherit">
+					          <tr>
+						            <th>Package</th>
+						            <th>ItemType</th>
+						            <th>Name</th>
+						            <th>Created On</th>
+						            <th>Modified On</th>
+						            <th>Core</th>
+						            <th>Rows</th>
+
+					          </tr>
+					          <xsl:apply-templates select="//Item"/>
+
+				        </table>
+			      </body>
+			      <script src="../../javascript/PopupMenu.js"/>
+		</html>
+	  </xsl:template>
+	  <xsl:template match="Item[@type]"/>
+	  <xsl:template match="Item[not(@type)]">
+		    <xsl:element name="tr">
+			      <xsl:attribute name="id">
+				        <xsl:value-of select="id"/>
+			      </xsl:attribute>
+			      <td uniqueID="ms__id1">
+				        <xsl:value-of select="package"/>
+			      </td>
+			      <td uniqueID="ms__id2">
+				        <xsl:value-of select="group"/>
+			      </td>
+			      <td uniqueID="ms__id3">
+				        <xsl:value-of select="keyed_name"/>
+			      </td>
+			      <td uniqueID="ms__id3">
+				        <xsl:value-of select="created_on"/>
+			      </td>
+			      <td uniqueID="ms__id4">
+				        <xsl:value-of select="modified_on"/>
+			      </td>
+			      <td uniqueID="ms__id5">
+				        <xsl:value-of select="core"/>
+				        <xsl:if test="core='' or not(core)">
+					          <xsl:text> </xsl:text>
+				        </xsl:if>
+			      </td>
+			      <td uniqueID="ms__id6">
+				        <xsl:value-of select="rows"/>
+				        <xsl:if test="rows='' or not(rows)">
+					          <xsl:text> </xsl:text>
+				        </xsl:if>
+			      </td>
+		    </xsl:element>
+	  </xsl:template>
+</xsl:stylesheet>]]></xsl_stylesheet>
+  <name>Configuration Report</name>
+ </Item>
+</AML>

@@ -1,0 +1,166 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="A4246D047FF14D4B866AC4E62E760FA2" action="add">
+  <description>Default System Element Lifecycle</description>
+  <start_state keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</start_state>
+  <name>sys_SystemElement</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="DF62FD3625754A399F1FC5FF6AD3FAEA" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <label xml:lang="en">In Change</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <state_permission_id keyed_name="In Change sys_SystemElement" type="Permission">A8C2DC22C45A4E91B51543DFC604E385</state_permission_id>
+    <x>665</x>
+    <y>40</y>
+    <name>In Change</name>
+   </Item>
+   <Item type="Life Cycle State" id="38010A87D09440DBA64B64581535870B" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">In Review</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <state_permission_id keyed_name="In Review sys_SystemElement" type="Permission">67A356CEE68648F296242603B6C9DD82</state_permission_id>
+    <x>223</x>
+    <y>44</y>
+    <name>In Review</name>
+   </Item>
+   <Item type="Life Cycle State" id="BF350D831434412B8FFEE1E52FE80DEC" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Preliminary</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <state_permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</state_permission_id>
+    <x>39</x>
+    <y>43</y>
+    <name>Preliminary</name>
+   </Item>
+   <Item type="Life Cycle State" id="134B1ABE9F074AD6A85DEA474B9FD480" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <label xml:lang="en">Released</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <state_permission_id keyed_name="Released sys_SystemElement" type="Permission">D8D221A31C214B54A4E450F7E7A18394</state_permission_id>
+    <x>442</x>
+    <y>41</y>
+    <name>Released</name>
+   </Item>
+   <Item type="Life Cycle State" id="C559D1F723F84D7D931069CCBBFC006B" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <label xml:lang="en">Superseded</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <state_permission_id keyed_name="Superseded sys_SystemElement" type="Permission">293181F4420F477285C14201C169A8AD</state_permission_id>
+    <x>899</x>
+    <y>34</y>
+    <name>Superseded</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="41227D610F244525B1C766B3ED0B110E" action="add">
+    <from_state keyed_name="Released" type="Life Cycle State">134B1ABE9F074AD6A85DEA474B9FD480</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments />
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="In Change" type="Life Cycle State">DF62FD3625754A399F1FC5FF6AD3FAEA</to_state>
+    <x>20</x>
+    <y>-16</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="00507E4F62A04F2BB36D0135EAC44D03" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">38010A87D09440DBA64B64581535870B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments>151,19</segments>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</to_state>
+    <x>-149</x>
+    <y>-45</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="B67A6671CD794ACAB18556C7DEBD1ED3" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">38010A87D09440DBA64B64581535870B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments />
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">134B1ABE9F074AD6A85DEA474B9FD480</to_state>
+    <x>10</x>
+    <y>-16</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="1AB777588D9E4D64A98F903627F357E4" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</role>
+    <segments />
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">38010A87D09440DBA64B64581535870B</to_state>
+    <x>52</x>
+    <y>-7</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="27E04DA078FE4213B7E54A576F84B3F8" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>230,190</segments>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">134B1ABE9F074AD6A85DEA474B9FD480</to_state>
+    <x>170</x>
+    <y>158</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="60F83BA2336D4B6FB6BD44B0586A2545" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</from_state>
+    <get_comment>1</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments>233,95</segments>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">134B1ABE9F074AD6A85DEA474B9FD480</to_state>
+    <x>106</x>
+    <y>62</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="6849135F1369445B9D9CEBCADD831362" action="add">
+    <from_state keyed_name="Superseded" type="Life Cycle State">C559D1F723F84D7D931069CCBBFC006B</from_state>
+    <get_comment>1</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments>675,128</segments>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">134B1ABE9F074AD6A85DEA474B9FD480</to_state>
+    <x>-310</x>
+    <y>118</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="127C34E561C94B2494C7DF11147E7A63" action="add">
+    <from_state keyed_name="In Change" type="Life Cycle State">DF62FD3625754A399F1FC5FF6AD3FAEA</from_state>
+    <get_comment>1</get_comment>
+    <role keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</role>
+    <segments />
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</source_id>
+    <to_state keyed_name="Superseded" type="Life Cycle State">C559D1F723F84D7D931069CCBBFC006B</to_state>
+    <x>32</x>
+    <y>-14</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

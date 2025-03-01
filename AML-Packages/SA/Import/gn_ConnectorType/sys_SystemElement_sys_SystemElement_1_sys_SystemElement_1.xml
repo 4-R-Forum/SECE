@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="C4EE89F7621A4D2FA2C14FC9B30A93EA" action="add">
+  <name>sys_SystemElement_sys_SystemElement_1_sys_SystemElement_1</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="3ED3C6ED7B7440418C8794CA26FFACA2" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement_sys_SystemElement_1_sys_SystemElement_1" type="gn_ConnectorType">C4EE89F7621A4D2FA2C14FC9B30A93EA</source_id>
+    <value_template>decomposed by</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

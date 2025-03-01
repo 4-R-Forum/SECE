@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="gn_NodeType" id="E0CDC78CDCA1444CAEB72B9FF6150FFB" action="add">
+  <itemtype_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype_id>
+  <name>sys_SystemElement_1_sys_SystemElement</name>
+  <Relationships>
+   <Item type="gn_NodeTypeProperty" id="241E7B30F28F48D8A9FE99D50D686F1B" action="add">
+    <name>icon</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement_1_sys_SystemElement" type="gn_NodeType">E0CDC78CDCA1444CAEB72B9FF6150FFB</source_id>
+    <value_template>{@icon}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="4470BD8D941C4400B2F0A5A72644C66F" action="add">
+    <name>keyed_name</name>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement_1_sys_SystemElement" type="gn_NodeType">E0CDC78CDCA1444CAEB72B9FF6150FFB</source_id>
+    <value_template>{keyed_name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="35FFE32451FB465AA17825F2DD6E5223" action="add">
+    <name>name</name>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemElement_1_sys_SystemElement" type="gn_NodeType">E0CDC78CDCA1444CAEB72B9FF6150FFB</source_id>
+    <value_template>{name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="9CAE45D7A2564026A8785D90E8880F02" action="add">
+    <name>classification</name>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_SystemElement_1_sys_SystemElement" type="gn_NodeType">E0CDC78CDCA1444CAEB72B9FF6150FFB</source_id>
+    <value_template>{classification}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="FA61DBE265BD441B9CD811BFB971D776" action="add">
+    <name>version</name>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_SystemElement_1_sys_SystemElement" type="gn_NodeType">E0CDC78CDCA1444CAEB72B9FF6150FFB</source_id>
+    <value_template>{major_rev}.{generation}</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

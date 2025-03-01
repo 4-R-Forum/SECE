@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="A356B08FD92A4067992E6192053CF859" action="add">
+  <name>Part_CAD_sys_Function_1</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="2A4F96EB60664C339165B1FE030D9891" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Part_CAD_sys_Function_1" type="gn_ConnectorType">A356B08FD92A4067992E6192053CF859</source_id>
+    <value_template>represents</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

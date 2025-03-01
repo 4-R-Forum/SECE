@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="gn_ViewCard" id="B19AEFADE0314B02AB01F438AFE60F4F" action="add">
+  <template_definition>{
+	"container": {
+	  "type": "grid",
+	  "style": {
+		"width": 0,
+		"height": 0,
+		"color": "black",
+		"padding": {
+			"left": 0.01,
+			"right": 0.01,
+			"top": -20,
+			"bottom": 0.01
+		},
+		"rows": [
+		  {
+			"height": 20
+		  }
+		],
+		"cols": [
+		  {
+			"width": 120
+		  }
+		],
+		"cells": [
+		  {
+			"content": "text",
+			"content_binding": "description",
+			"col": 0,
+			"row": 0,
+			"style": {
+				"font": {
+					"size": 12,
+					"family": "Roboto",
+					"weight": "normal",
+					"color": "#333333"
+				}
+			}
+		  }
+		]
+	  }
+	},
+	"style": {
+	  "color": "#555555",
+	  "weight": 1,
+	  "arrowhead": {
+		"color": "#555555",
+		"height": 17,
+		"width": 7
+	  }
+	}
+  }</template_definition>
+  <name>System Common Connector View Card</name>
+ </Item>
+</AML>

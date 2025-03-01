@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="gn_GraphViewNode" id="913B18C8FC5F4DCAA2F1CC0C49AF7651" action="add">
+  <end_query_item_id keyed_name="sys_System" type="qry_QueryItem">FFB6AEBE079E4FFD8AE181CA97A9111B</end_query_item_id>
+  <node_type_id keyed_name="sys_System_sys_SystemElement" type="gn_NodeType">6A8979A52F184621B0CF208CD2309D79</node_type_id>
+  <sort_order>640</sort_order>
+  <source_id keyed_name="System Element Graph View" type="gn_GraphViewDefinition">6D3B587C0D5E473A865739BBC66493D5</source_id>
+  <start_query_item_id keyed_name="sys_System" type="qry_QueryItem">FFB6AEBE079E4FFD8AE181CA97A9111B</start_query_item_id>
+ </Item>
+</AML>

@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="gn_NodeType" id="6F6BA77D518D41E9A8FD9DC8ABE27E9A" action="add">
+  <itemtype_id keyed_name="sys_Function" type="ItemType" name="sys_Function">9E327F81321C4FCF82166CA09A6CFACC</itemtype_id>
+  <name>sys_Function_sys_System</name>
+  <Relationships>
+   <Item type="gn_NodeTypeProperty" id="90BECF73AEB1472B819C31343F9B4A64" action="add">
+    <name>icon</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_Function_sys_System" type="gn_NodeType">6F6BA77D518D41E9A8FD9DC8ABE27E9A</source_id>
+    <value_template>{@icon}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="471D15B791C046A7AC5D4751DF1502AD" action="add">
+    <name>keyed_name</name>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_Function_sys_System" type="gn_NodeType">6F6BA77D518D41E9A8FD9DC8ABE27E9A</source_id>
+    <value_template>{keyed_name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="7BE404D625EC47B998C4A5ECE166227C" action="add">
+    <name>name</name>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_Function_sys_System" type="gn_NodeType">6F6BA77D518D41E9A8FD9DC8ABE27E9A</source_id>
+    <value_template>{name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="919AE04C76854D3A84F3A1FFB950C65F" action="add">
+    <name>classification</name>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_Function_sys_System" type="gn_NodeType">6F6BA77D518D41E9A8FD9DC8ABE27E9A</source_id>
+    <value_template>{classification}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="FE73156F68E64749B499B2C5FC58A3A9" action="add">
+    <name>version</name>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_Function_sys_System" type="gn_NodeType">6F6BA77D518D41E9A8FD9DC8ABE27E9A</source_id>
+    <value_template>{major_rev}.{generation}</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

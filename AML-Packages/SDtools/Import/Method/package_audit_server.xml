@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="Method" id="B4F3F09F4D3F46639C7105AE993D5520" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[Innovator innov=this.getInnovator();
+Item this_item=innov.getItemById("PackageDefinition",this.getID());
+string package_names=this_item.getProperty("name");
+//string package_names="ITG MDM";
+
+
+
+
+Item qry1 = this.newItem("SQL","SQL PROCESS");
+qry1.setProperty("name","SelectPackageAudit");
+qry1.setProperty("PROCESS","CALL");
+qry1.setProperty("ARG1", package_names);
+Item result = qry1.apply();
+return result;]]></method_code>
+  <method_type>C#</method_type>
+  <name>package_audit_server</name>
+ </Item>
+</AML>

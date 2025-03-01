@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="E66233B0D8EC4E30B264174FE7B4B02F" action="add">
+  <name>sys_MakeBuy</name>
+  <Relationships>
+   <Item type="Value" id="48638F7557EC4BBF92BD1F0BE758194C" action="add">
+    <label xml:lang="en">Make</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_MakeBuy" type="List">E66233B0D8EC4E30B264174FE7B4B02F</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="64EEEF0585604A69A7505D17ADF77360" action="add">
+    <label xml:lang="en">Buy</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_MakeBuy" type="List">E66233B0D8EC4E30B264174FE7B4B02F</source_id>
+    <value>2</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

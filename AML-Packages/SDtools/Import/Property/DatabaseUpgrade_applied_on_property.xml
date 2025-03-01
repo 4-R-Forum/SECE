@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="Property" id="22FA8AE8E8A34D7787E1E0BA8BF78808" action="add">
+  <column_alignment>left</column_alignment>
+  <data_type>date</data_type>
+  <is_hidden>0</is_hidden>
+  <is_hidden2>0</is_hidden2>
+  <is_indexed>0</is_indexed>
+  <is_keyed>0</is_keyed>
+  <is_multi_valued>0</is_multi_valued>
+  <is_required>0</is_required>
+  <label xml:lang="en">Applied On</label>
+  <pattern>short_date_time</pattern>
+  <range_inclusive>0</range_inclusive>
+  <readonly>0</readonly>
+  <sort_order>512</sort_order>
+  <source_id keyed_name="DatabaseUpgrade" type="ItemType" name="DatabaseUpgrade">4DAD707F62B54823AE2E4730BB00C649</source_id>
+  <track_history>0</track_history>
+  <name>applied_on</name>
+ </Item>
+</AML>

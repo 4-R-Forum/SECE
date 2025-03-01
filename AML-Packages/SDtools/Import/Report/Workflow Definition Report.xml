@@ -1,0 +1,443 @@
+﻿<AML>
+ <Item type="Report" id="F5EEDB53EB514FCAA715FBBFC05D4EFB" action="add">
+  <label xml:lang="en">Workflow Definition Report</label>
+  <location>server</location>
+  <report_query><![CDATA[<Item type="{@type}" id="{@id}" action="get" select="name,process_owner,description">
+  <Relationships>
+    <Item type='Workflow Map Activity' select='related_id'>
+      <related_id>
+        <Item type='Activity Template' >         
+           <Relationships>
+             <Item type='Activity Template Assignment' action='get' related_expand='0' select='sort_order,voting_weight,related_id,escalate_to,for_all_members'  />
+             <Item type='Workflow Map Path' action='get' related_expand='0' select='name,sort_order,is_default,is_override'>
+               <Relationships>
+                   <Item type='Workflow Map Path Pre' action='get' related_expand='0' select='related_id' orderBy='sort_order' />
+                   <Item type='Workflow Map Path Post' action='get' related_expand='0' select='related_id' orderBy='sort_order' />
+               </Relationships>
+             </Item>
+             <Item type='Activity Template Variable' action='get' related_expand='0' select='sort_order,name,data_type' orderBy='sort_order'/>
+             <Item type='Activity Template Email' action='get' related_expand='0' select='sort_order,event,target,related_id' orderBy='sort_order' />
+             <Item type='Activity Template Task' action='get' related_expand='0' select='sort_order,description,is_required' orderBy='sort_order' />
+             <Item type='Activity Template Method' action='get' related_expand='0' select='sort_order,event,related_id' orderBy='sort_order' />
+             <Item type='Activity Template Transition' action='get' related_expand='1' select='sort_order,event,related_id(from_state,to_state,pre_action,post_action)' orderBy='sort_order' />
+         </Relationships>
+        </Item>
+      </related_id>
+    </Item>
+  </Relationships>
+</Item>]]></report_query>
+  <target>window</target>
+  <type>item</type>
+  <xsl_stylesheet><![CDATA[<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	  <xsl:template match="//Item[@type='Workflow Map']">
+		    <html>
+			      <head/>
+			      <style type="text/css" userData="Global">
+				        table {
+				        border:0
+				        }
+				        .cellSolid {
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidTopRight {
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        }
+				        .cellSolidTopLeft {
+				        border-top:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidRightBottom {
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        }
+				        .cellSolidBottomLeft {
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        }
+				        .cellSolidTop {
+				        border-top:1px #000000 solid;
+				        }
+				        .cellSolidRight {
+				        border-right:1px #000000 solid;
+				        }
+				        .cellSolidBottom {
+				        border-bottom:1px #000000 solid;
+				        }
+				        .cellSolidLeft {
+				        border-left:1px #000000 solid;
+				        }
+				        .cellDashed {
+				        border-top:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        border-bottom:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedTopRight {
+				        border-top:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedTopLeft {
+				        border-top:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedBottomRight {
+				        border-bottom:1px #666666 dashed;
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedBottomLeft {
+				        border-bottom:1px #666666 dashed;
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellDashedTop {
+				        border-top:1px #666666 dashed;
+				        }
+				        .cellDashedRight {
+				        border-right:1px #666666 dashed;
+				        }
+				        .cellDashedBottom {
+				        border-bottom:1px #666666 dashed;
+				        }
+				        .cellDashedLeft {
+				        border-left:1px #666666 dashed;
+				        }
+				        .cellHeader {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        padding:2px;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+				        .cellHeaderVertBT {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        padding:2px;
+				        writing-mode:tb-rl;filter: flipv fliph;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+				        .cellHeaderVertTB {
+				        background-color:#CCCCCC;
+				        border-top:1px #000000 solid;
+				        border-right:1px #000000 solid;
+				        border-bottom:1px #000000 solid;
+				        border-left:1px #000000 solid;
+				        padding:2px;
+				        writing-mode:tb-rl;filter: flipv flipv;
+				        text-align:center;
+				        text-transform:capitalize;
+				        text-align:center;
+				        font-family:helvetica;
+				        font-weight:bold;
+				        font-size:8pt;
+				        }
+			      </style>
+			      <body style="font-family:Arial">
+				        Workflow Map Report        <b>
+					          <xsl:value-of select="name"/>
+				        </b>
+				        <br/>
+				        Process Owner:        <xsl:value-of select="process_owner/@keyed_name"/>
+				        <br/>
+				        <xsl:value-of select="description"/>
+				        <table width="800">
+					          <xsl:apply-templates select="Relationships/Item[@type='Workflow Map Activity']/related_id/Item[@type='Activity Template']">
+						            <xsl:sort data-type="number" select="priority"/>
+						            <xsl:sort data-type="number" select="x"/>
+						            <xsl:sort data-type="number" select="y"/>
+					          </xsl:apply-templates>
+				        </table>
+			      </body>
+			      <script src="../../javascript/PopupMenu.js"/>
+		    </html>
+	  </xsl:template>
+	  <!--  <xsl:template  match="name">
+		    <xsl:value-of select= "." />
+	  </xsl:template>
+	-->
+	  <xsl:template match="Relationships/Item[@type='Workflow Map Activity']/related_id/Item[@type='Activity Template']">
+		    <tr>
+			      <td colspan="2">
+				        <hr/>
+			      </td>
+		    </tr>
+		    <tr>
+			      <td width="200">
+				        <table width="200">
+					          <tr width="200">
+						            <td class="cellHeader">
+							                                                                     <xsl:value-of select="priority"/>
+							.
+							              <xsl:value-of select="name"/>
+						            </td>
+					          </tr>
+					          <xsl:if test="can_refuse='1'">
+						            <tr>
+							              <td>Can Refuse</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="is_start='1'">
+						            <tr>
+							              <td>Start</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="is_end='1'">
+						            <tr>
+							              <td>End</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="is_auto='1'">
+						            <tr>
+							              <td>Auto</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="can_delegate='1'">
+						            <tr>
+							              <td>Can Delegate</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="consolidate_ondelegate='1'">
+						            <tr>
+							              <td>Consolidate on Delegate</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="wait_for_all_inputs='1'">
+						            <tr>
+							              <td>Wait for all Inputs</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="wait_for_all_votes='1'">
+						            <tr>
+							              <td>Wait for all Votes</td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="escalate_to">
+						            <tr>
+							              <td>
+								                Escalate to:                <xsl:value-of select="escalate_to/@keyed_name"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="expected_duration">
+						            <tr>
+							              <td>
+								                Duration:                <xsl:value-of select="expected_duration"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="timeout_duration">
+						            <tr>
+							              <td>
+								                Timeout:                <xsl:value-of select="timeout_duration"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="reminder_count">
+						            <tr>
+							              <td>
+								                Reminders:                <xsl:value-of select="reminder_count_duration"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="reminder_interval">
+						            <tr>
+							              <td>
+								                Interval:                <xsl:value-of select="reminder_interval"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="subflow">
+						            <tr>
+							              <td>
+								                Sublow:                <xsl:value-of select="subflow/@keyed_name"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="managed_by_id">
+						            <tr>
+							              <td>
+								                Manager:                <xsl:value-of select="managed_by_id/@keyed_name"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+					          <xsl:if test="role">
+						            <tr>
+							              <td>
+								                Role:                <xsl:value-of select="role/@keyed_name"/>
+							              </td>
+						            </tr>
+					          </xsl:if>
+				        </table>
+			      </td>
+			      <td width="600">
+				        <table>
+					          <xsl:apply-templates select="Relationships"/>
+				        </table>
+			      </td>
+		    </tr>
+	  </xsl:template>
+	  <xsl:template match="description">
+		    <xsl:value-of select="."/>
+	  </xsl:template>
+	  <xsl:template match="Relationships">
+		    <!--<tr colspan='2'>
+			<b>Assigments</b>
+		 </tr>
+		 -->
+		    <xsl:for-each select="Item[@type='Activity Template Assignment']">
+			      <tr>
+				        <td colspan="3">
+					          Assnd:          <xsl:value-of select="related_id/@keyed_name"/>
+					          <xsl:if test="escalate_to">
+						            Escl:            <xsl:value-of select="escalate_to/@keyed_name"/>
+					          </xsl:if>
+				        </td>
+				        <td width="120">
+					          <xsl:choose>
+						            <xsl:when test="for_all_members='1'">All</xsl:when>
+						            <xsl:otherwise>Any</xsl:otherwise>
+					          </xsl:choose>
+				        </td>
+				        <td width="120">
+					          Weight:          <xsl:value-of select="voting_weight"/>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Activity Template Task']">
+			      <xsl:sort data-type="number" select="sequence"/>
+			      <tr>
+				        <td width="120">Task</td>
+                        <td width="120">
+					        <xsl:value-of select="sort_order"/>
+				        </td>
+				        <td colspan="3">
+					          <xsl:value-of select="description"/>
+				        </td>
+				        <td width="120">
+					          <xsl:choose>
+						            <xsl:when test="is_required='1'">Required</xsl:when>
+                                      <xsl:otherwise>Optional</xsl:otherwise>
+					          </xsl:choose>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Activity Template Method']">
+			      <tr>
+				        <td width="120">Event</td>
+				        <td width="120">
+					          <xsl:value-of select="event"/>
+				        </td>
+				        <td colspan="3">
+					          <xsl:value-of select="related_id/@keyed_name"/>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Workflow Map Path']">
+			      <tr>
+				        <td width="120">Path</td>
+				        <td width="120">
+					        <xsl:value-of select="sort_order"/>
+				        </td>
+				        <td width="120">
+					          <xsl:value-of select="name"/>
+				        </td>
+				        <td width="120">
+					          <xsl:choose>
+						            <xsl:when test="is_default='1'">
+							              <b>Default </b>
+						            </xsl:when>
+					          </xsl:choose>
+					          <xsl:choose>
+						            <xsl:when test="is_override='1'">
+							              <b>Override </b>
+						            </xsl:when>
+					          </xsl:choose>
+				        </td>
+				        <td colspan="2">
+					          <table border="1">
+						            <xsl:apply-templates select="Relationships"/>
+					          </table>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Activity Template EMail']">
+			      <tr>
+				        <td width="120">Email</td>
+				        <td width="120">
+					          <xsl:value-of select="event"/>
+				        </td>
+				        <td width="120">
+					          <xsl:value-of select="target"/>
+				        </td>
+				        <td colspan="2">
+					          <xsl:value-of select="related_id/@keyed_name"/>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Workflow Map Path Pre']">
+			      <tr>
+				        <td width="120">Pre</td>
+				        <td width="120">
+					          <xsl:value-of select="related_id/@keyed_name"/>
+				        </td>
+				        <td width="120"/>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Workflow Map Path Post']">
+			      <tr>
+				        <td width="120">Post</td>
+				        <td width="120">
+					          <xsl:value-of select="related_id/@keyed_name"/>
+				        </td>
+				        <td width="120"/>
+			      </tr>
+		    </xsl:for-each>
+		    <xsl:for-each select="Item[@type='Activity Template Transition']">
+			      <tr>
+				        <td width="120">Promotion</td>
+				        <td width="120">
+					          <xsl:value-of select="event"/>
+				        </td>
+				        <td colspan="3">
+					From          <b>
+						            <xsl:value-of select="related_id/Item/from_state/@keyed_name"/>
+					          </b>
+					 To          <b>
+						            <xsl:value-of select="related_id/Item/to_state/@keyed_name"/>
+					          </b>
+					          <xsl:if test="related_id/Item/pre_action!=''">
+						            <br/>
+						 Calls Pre Method            <b>
+							              <xsl:value-of select="related_id/Item/pre_action/@keyed_name"/>
+						            </b>
+					          </xsl:if>
+					          <xsl:if test="related_id/Item/post_action!=''">
+						            <br/>
+						 Calls Post Method            <b>
+							              <xsl:value-of select="related_id/Item/post_action/@keyed_name"/>
+						            </b>
+					          </xsl:if>
+				        </td>
+			      </tr>
+		    </xsl:for-each>
+	  </xsl:template>
+</xsl:stylesheet>]]></xsl_stylesheet>
+  <name>Workflow Definition Report</name>
+ </Item>
+</AML>

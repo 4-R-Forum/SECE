@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="E37745EA29E01FD999E9D85137DB46EF" action="add">
+  <additional_data>{"itemTypeId":"9E327F81321C4FCF82166CA09A6CFACC"}</additional_data>
+  <image>../Solutions/SA/images/FunctionSA.svg</image>
+  <label xml:lang="en">Functions</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.toc_Systems Architecture" type="CommandBarMenu">5AAFFBE05F5C360C1B1FE36BEE101724</parent_menu>
+  <name>com.aras.innovator.cui_default.toc_sys_Function_E37745EA29E01FD965C6CAB9CB36D6DA</name>
+ </Item>
+</AML>

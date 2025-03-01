@@ -1,0 +1,52 @@
+﻿<AML>
+ <Item type="Permission" id="B1DD6856316C4FA1BE31DAC4D38CAA1D" action="add">
+  <is_private>0</is_private>
+  <name>Preliminary sys_System</name>
+  <Relationships>
+   <Item type="Access" id="2F6C9281D2514A9CA673A6F3ABE68E37" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</source_id>
+   </Item>
+   <Item type="Access" id="5A605FB8AAC64B92A11D74B95844CC59" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Consumer" type="Identity">DBDB82A32E3D42F9A23485D2955302BE</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</source_id>
+   </Item>
+   <Item type="Access" id="611E6896D18048039C45FC17DD698D6C" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</source_id>
+   </Item>
+   <Item type="Access" id="A53D8772287246E5AA9A90B8273C0777" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,25 @@
+<config>
+<!-- multiple machines are now supported in master_config -->
+<!-- SAMPLE CONFIG for machine
+<machine name="MACHINE">
+	<innovator_url>http://localhost/MyProject/</innovator_url>
+	<database_name>MyProject</database_name>
+	<backup_folder>C:\MyProject\InnovatorBackup</backup_folder> 
+	<installation_folder>C:\MyProject</installation_folder> 
+	<sql_service>MSSQL$SQL2019</sql_service> 
+	<sql_instance>localhost\SQL2019</sql_instance>     
+	<sql_bak>C:\DataBackup\MyProject.bak</sql_bak> 
+</machine>
+-->
+<machine name="GOLF">
+	<innovator_url>http://localhost/SECE/</innovator_url>
+	<database_name>SECE</database_name>
+	<backup_folder>C:\InnovatorCE2025\InnovatorBackup</backup_folder> 
+	<installation_folder>C:\InnovatorCE2025</installation_folder> 
+	<sql_service>MSSQL$SQL2019</sql_service> 
+	<sql_instance>localhost\SQL2019</sql_instance>     
+	<sql_bak>C:\DataBackup\SECE.bak</sql_bak> 
+</machine>
+
+
+</config>

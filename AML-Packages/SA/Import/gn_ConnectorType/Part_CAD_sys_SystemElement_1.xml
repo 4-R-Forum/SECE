@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="3975D8F709F4437FAB09F05CFE2267A5" action="add">
+  <name>Part_CAD_sys_SystemElement_1</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="DAC207E4EC274CEDA0E125812C5FF4DE" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Part_CAD_sys_SystemElement_1" type="gn_ConnectorType">3975D8F709F4437FAB09F05CFE2267A5</source_id>
+    <value_template>represents</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="gn_NodeType" id="B72F145EF2F540868A987915A84CA16F" action="add">
+  <itemtype_id keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</itemtype_id>
+  <name>File_sys_System</name>
+  <Relationships>
+   <Item type="gn_NodeTypeProperty" id="48D05A66D25E406592460FBDC1FAD84C" action="add">
+    <name>icon</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="File_sys_System" type="gn_NodeType">B72F145EF2F540868A987915A84CA16F</source_id>
+    <value_template>{@icon}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="6907C937A91E41649AFE3F302D65D073" action="add">
+    <name>filename</name>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="File_sys_System" type="gn_NodeType">B72F145EF2F540868A987915A84CA16F</source_id>
+    <value_template>{filename}</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

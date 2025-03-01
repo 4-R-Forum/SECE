@@ -1,0 +1,52 @@
+﻿<AML>
+ <Item type="Permission" id="16D34CDA2CD84FA0A28FFDF8B02D5E97" action="add">
+  <is_private>0</is_private>
+  <name>Superseded sys_System</name>
+  <Relationships>
+   <Item type="Access" id="1AC277465F674977B18D994FB22D308E" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>0</can_discover>
+    <can_get>0</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Consumer" type="Identity">DBDB82A32E3D42F9A23485D2955302BE</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Superseded sys_System" type="Permission">16D34CDA2CD84FA0A28FFDF8B02D5E97</source_id>
+   </Item>
+   <Item type="Access" id="583667CBC670427DA1E8F7A44A4B7EDF" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Superseded sys_System" type="Permission">16D34CDA2CD84FA0A28FFDF8B02D5E97</source_id>
+   </Item>
+   <Item type="Access" id="FC7B6E666D4F47E4BAB129D810BA673D" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Superseded sys_System" type="Permission">16D34CDA2CD84FA0A28FFDF8B02D5E97</source_id>
+   </Item>
+   <Item type="Access" id="FE266332DAFA4A79A0C6958E7936066B" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Superseded sys_System" type="Permission">16D34CDA2CD84FA0A28FFDF8B02D5E97</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

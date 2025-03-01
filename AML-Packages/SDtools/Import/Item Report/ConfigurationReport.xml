@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="Item Report" id="D360E8B28A1B4F17B46B7A3FE1898FFA" action="add">
+  <related_id keyed_name="Configuration Report" type="Report">23C3B9410FCC4B0881DBED609120AEE0</related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="DatabaseUpgrade" type="ItemType" name="DatabaseUpgrade">4DAD707F62B54823AE2E4730BB00C649</source_id>
+ </Item>
+</AML>

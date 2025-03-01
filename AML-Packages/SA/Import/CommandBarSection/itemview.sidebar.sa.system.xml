@@ -1,0 +1,30 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="C9364E10B336405E9BF4DEE56AB567B6" action="add">
+  <classification>Data Model</classification>
+  <location keyed_name="ItemWindowSidebar" type="cui_Location">BC1CFDCECA434111B7A88A51EE430CC5</location>
+  <name>itemview.sidebar.sa.system</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="FAC0B3C120D04DF69B97B1C363F34E14" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="show_form" type="CommandBarItem">700942604FB941799B24C3FDDD68DDFF</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>16</sort_order>
+    <source_id keyed_name="itemview.sidebar.sa.system" type="CommandBarSection">C9364E10B336405E9BF4DEE56AB567B6</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="5BC96A998E4C4C2095B119DD0EE15BE1" action="add">
+    <action>Add</action>
+    <related_id keyed_name="show_form" type="CommandBarItem">700942604FB941799B24C3FDDD68DDFF</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>32</sort_order>
+    <source_id keyed_name="itemview.sidebar.sa.system" type="CommandBarSection">C9364E10B336405E9BF4DEE56AB567B6</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="BAD647F1F4E44202B688BC58E4D9AAC9" action="add">
+    <action>Add</action>
+    <related_id keyed_name="temview.sidebar.sa.system.showgraph" type="CommandBarItem">76C86535EB0647A3AF773B83BA67E169</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>64</sort_order>
+    <source_id keyed_name="itemview.sidebar.sa.system" type="CommandBarSection">C9364E10B336405E9BF4DEE56AB567B6</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

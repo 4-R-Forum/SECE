@@ -1,0 +1,146 @@
+﻿<AML>
+ <Item type="gn_GVDefaultCard" id="7B1EF42872F349CCA0A9B301592F5461" action="add">
+  <itemtype_id keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</itemtype_id>
+  <related_id keyed_name="Part_sys_Function" type="gn_ViewCard">
+   <Item type="gn_ViewCard" id="9519043B4F3745478B5FB9ECB8E487B7" action="add">
+    <template_definition>{
+	"container":{
+		"type":"grid",
+		"style":{
+			"width":225,
+			"height":75,
+			"color": "#F7F7F7",
+			"padding": {
+				"left": 0.01,
+				"right": 12,
+				"top": 0.01,
+				"bottom": 0.01
+			},
+			"rows": [{"height": 16},{"height": -8},{"height": 24},{"height": 20},{"height": 23}],
+			"cols": [{"width": 4},{"width": 4},{"width": 28},{"width": 133},{"width": 30},{"width": 40}],
+			"border": {
+				"width": 1,
+				"color": "#555555",
+				"cornerRadius": 2,
+				"shadow": {
+					"horizontal": 1,
+					"vertical": 2,
+					"color": "#000000",
+					"opacity": 0.4
+				}
+			},
+			"cells": [
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 0,
+					"style": {
+						"backgroundColor": "#8959AB"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 2,
+					"style": {
+						"backgroundColor": "#8959AB"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 3,
+					"style": {
+						"backgroundColor": "#8959AB"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 4,
+					"style": {
+						"backgroundColor": "#8959AB"
+					}
+				},
+				{
+					"content": "image",
+					"content_binding": "icon",
+					"col": 2,
+					"row": 2,
+					"style": {
+						"width": 24,
+						"height": 24
+					}
+				},
+				{
+					"content": "text",
+					"content_binding": "keyed_name",
+					"col": 3,
+					"row": 2,
+					"style": {
+						"font": {
+							"size": 18,
+							"family": "Tahoma",
+							"weight": "bold",
+							"color": "#333333"
+						}
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 4,
+					"row": 0
+				},
+				{
+					"content": "text",
+					"content_binding": "version",
+					"col": 5,
+					"row": 1,
+					"style": {
+						"font": {
+							"size": 10,
+							"family": "Tahoma",
+							"weight": "normal",
+							"color": "#777777"
+						}
+					}
+				},
+				{
+					"content": "text",
+					"content_binding": "name",
+					"col": 3,
+					"row": 3,
+					"style": {
+						"font": {
+							"size": 12,
+							"family": "Tahoma",
+							"weight": "normal",
+							"color": "#333333"
+						}
+					}
+				},
+				{
+					"content": "text",
+					"content_binding": "classification",
+					"col": 3,
+					"row": 4,
+					"style": {
+						"font": {
+							"size": 10,
+							"family": "Tahoma",
+							"weight": "normal",
+							"color": "#777777"
+						}
+					}
+				}
+			]
+		}
+	}
+}</template_definition>
+    <name>Part_sys_Function</name>
+   </Item>
+  </related_id>
+  <sort_order>512</sort_order>
+  <source_id keyed_name="Function" type="gn_GraphViewDefinition">D56CAC767EE845F29B467FDC5C79B9ED</source_id>
+ </Item>
+</AML>

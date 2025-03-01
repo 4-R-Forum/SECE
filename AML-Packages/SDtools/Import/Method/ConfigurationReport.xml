@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="Method" id="D431E15BA27B4203A58BF946E0915DFF" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[Innovator innov=this.getInnovator();
+I18NSessionContext cntx=innov.getI18NSessionContext();
+string id = this.getID();
+Item dbu=innov.getItemById("DatabaseUpgrade",id);
+string since=dbu.getProperty("applied_on");
+Item qry1 = this.newItem("SQL","SQL PROCESS");
+qry1.setProperty("name","ConfigurationReport2");
+qry1.setProperty("PROCESS","CALL");
+qry1.setProperty("ARG1", id);
+Item res = qry1.apply();
+if (res.isError()) {return res;	}
+Item qry2=this.newItem("Header");
+qry2.setProperty("applied_on",since);
+qry2.setProperty("db",CCO.DB.DatabaseName);
+if (res.getResult()=="") {res=qry2;}
+else {res.appendItem(qry2);}
+
+return  res;
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>ConfigurationReport</name>
+ </Item>
+</AML>

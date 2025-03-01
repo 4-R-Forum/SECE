@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="gn_ConnectorViewDefinition" id="39EC4B92E0A74A138BCB672A62FA5FEF" action="add">
+  <name>Sytem Common Connector View Definition</name>
+  <Relationships>
+   <Item type="gn_ConnectorViewTemplate" id="224E952F06EE4DB0A880334D07D0142A" action="add">
+    <related_id keyed_name="Sytem Common Connector View Card" type="gn_ViewCard">B19AEFADE0314B02AB01F438AFE60F4F</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Sytem Common Connector View Definition" type="gn_ConnectorViewDefinition">39EC4B92E0A74A138BCB672A62FA5FEF</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

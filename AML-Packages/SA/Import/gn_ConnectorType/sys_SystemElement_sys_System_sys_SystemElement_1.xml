@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="CD3418A0506C4EF892B14E9BBAC1EF33" action="add">
+  <name>sys_SystemElement_sys_System_sys_SystemElement_1</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="57A20E26C94B41748575E34B0CC8E391" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement_sys_System_sys_SystemElement_1" type="gn_ConnectorType">CD3418A0506C4EF892B14E9BBAC1EF33</source_id>
+    <value_template>consists of</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

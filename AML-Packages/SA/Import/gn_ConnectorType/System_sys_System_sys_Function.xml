@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="5035FAECDFF241989909473780C42A26" action="add">
+  <name>System_sys_System_sys_Function</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="15DC78081D6E4274836FA0458C8BD1BF" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="System_sys_System_sys_Function" type="gn_ConnectorType">5035FAECDFF241989909473780C42A26</source_id>
+    <value_template>provides</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

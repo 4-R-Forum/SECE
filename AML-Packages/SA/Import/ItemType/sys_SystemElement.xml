@@ -1,0 +1,373 @@
+﻿<AML>
+ <Item type="ItemType" id="F09A89AEF0F74FA8BD5ED2F822C0E9A7" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>0</auto_search>
+  <class_structure><![CDATA[<class id="F09A89AEF0F74FA8BD5ED2F822C0E9A7"><class id="28851DA555F74E399AC610A2D5EB0EE1" name="Actor" /><class id="E56806B4E9624B4D8C8A7E43BF923886" name="External System" /><class id="545F98A5DBE44BB3BF7CFA813670BA62" name="Internal System" /><class id="F046881AE2374004B933E58037F837AF" name="System of Interest" /><class id="29166E03126548F0AA05269DAD77016D" name="System of Systems" /></class>]]></class_structure>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <history_template keyed_name="Default" type="History Template">3BC16EF9E52B4F9792AB76BCE0492F29</history_template>
+  <implementation_type>table</implementation_type>
+  <instance_data>SYS_SYSTEMELEMENT</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>1</is_versionable>
+  <label xml:lang="en">System Element</label>
+  <label_plural xml:lang="en">System Elements</label_plural>
+  <large_icon>../Solutions/SA/images/SystemElement.svg</large_icon>
+  <manual_versioning>1</manual_versioning>
+  <open_icon>../Solutions/SA/images/SystemElement.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>0</show_parameters_tab>
+  <structure_view>tabs on</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>sys_SystemElement</name>
+  <Relationships>
+   <Item type="DiscussionTemplate" id="F22EDD86F85849BB9C5B3DED21883A52" action="add">
+    <file_selection_depth>0</file_selection_depth>
+    <item_selection_depth>3</item_selection_depth>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <visibility_supported>1</visibility_supported>
+    <Relationships>
+     <Item type="FeedTemplate" id="6232DA865951404EB902D6EBCC7DCEEE" action="add">
+      <feed_type>Board</feed_type>
+      <reference>this</reference>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F22EDD86F85849BB9C5B3DED21883A52" type="DiscussionTemplate">F22EDD86F85849BB9C5B3DED21883A52</source_id>
+     </Item>
+     <Item type="FeedTemplate" id="BE7CC97C232D462F838C62832E19EB5E" action="add">
+      <feed_type>Discussion</feed_type>
+      <reference>sys_SystemElement Structure(related_id)</reference>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="F22EDD86F85849BB9C5B3DED21883A52" type="DiscussionTemplate">F22EDD86F85849BB9C5B3DED21883A52</source_id>
+     </Item>
+     <Item type="DiscussionTemplateView" id="9C6383B1CCD04413B93C441D8299A9E0" action="add">
+      <client>js</client>
+      <related_id keyed_name="93DF760A9F6540AF8C40FA4F963FF8CB" type="SSVCPresentationConfiguration">
+       <Item type="SSVCPresentationConfiguration" id="B24F93C98EE64F81B0E4183D3648C012" action="add">
+        <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+        <form_tooltip_template xml:lang="en">Form of ${ItemType:label} ${Item:keyed_name}</form_tooltip_template>
+        <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+        <name>93DF760A9F6540AF8C40FA4F963FF8CB</name>
+       </Item>
+      </related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F22EDD86F85849BB9C5B3DED21883A52" type="DiscussionTemplate">F22EDD86F85849BB9C5B3DED21883A52</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="ITPresentationConfiguration" id="D87E98A4C7224BC8B599D16ADF838078" action="add">
+    <client>js</client>
+    <related_id keyed_name="sys_SystemElementPC" type="PresentationConfiguration">2B60E5A8802146A2A1F7AF3741F97894</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Property" id="8B0B41D724AF40EC96DD687F5F077219" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Description</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="1A5BA9DECDDB49FFB44B746EF85107D5" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>1</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External ID</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>external_id</name>
+   </Item>
+   <Item type="Property" id="465073D3B0FC4FE6A7AB75FAD9796AB5" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External Owner</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>128</stored_length>
+    <track_history>0</track_history>
+    <name>external_owner</name>
+   </Item>
+   <Item type="Property" id="29EA6948EED94EE987DD92347AFE1156" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External Type</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>128</stored_length>
+    <track_history>0</track_history>
+    <name>external_type</name>
+   </Item>
+   <Item type="Property" id="E87E9617FCDE4C279BA4CD4CDBDFBB18" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="sys_SystemElement">8221A232B9DF4EBE91D6B3185FA86305</data_source>
+    <data_type>sequence</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">System Element Number</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <track_history>0</track_history>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" id="8C75299F12844B0782D0EF837314F2A0" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_source keyed_name="sys_MakeBuy">E66233B0D8EC4E30B264174FE7B4B02F</data_source>
+    <data_type>list</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Make / Buy</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>make_buy</name>
+   </Item>
+   <Item type="Property" id="781FFB35EBCF40C18EB06A77104F117F" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>2</keyed_name_order>
+    <label xml:lang="en">Name</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>name</name>
+   </Item>
+   <Item type="Property" id="92CD7CA94D99470DBF750BA9360724FA" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="sys_Leading_Discipline">93ECE3D26DA4402BB346A3C3FBFABA42</data_source>
+    <data_type>list</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Leading Discipline</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>sys_leading_discipline</name>
+   </Item>
+   <Item type="View" id="5862BB8E254E4670AFE7CBA20B05F9C8" action="add">
+    <client>js</client>
+    <related_id keyed_name="sys_SystemElement" type="Form">FAB2689ABEA04ABA8507BA16BD020CB9</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>1</show_ssvc>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="Item Action" id="8C747220C852E079FCA86F91283C4734" action="add">
+    <related_id keyed_name="Change Discussion Definition" type="Action">5B155B40AD8F405D812EF95BC5848214</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Item Action" id="BD6E32CF771243C49A1B950D03DA9F66" action="add">
+    <related_id keyed_name="VC_AddItemsToBookmarks" type="Action">FD4D2BE9E2B14919BF1973842A556AFD</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="ItemType Life Cycle" id="FC89EF1CDB874AD896D541A91695CAB6" action="add">
+    <related_id keyed_name="sys_SystemElement" type="Life Cycle Map">A4246D047FF14D4B866AC4E62E760FA2</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Can Add" id="5168856FB77944FA9B74FE0001C9CE38" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Can Add" id="E4DBF44549184F2A96C42DEBA95863B7" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Can Add" id="CC1383AC470242FEA57E6D16A64100FB" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="49DB216FA9D740348A1A18D70DB73443" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="F09A89AEF0F74FA8BD5ED2F822C0E9A7" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='F09A89AEF0F74FA8BD5ED2F822C0E9A7' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Type</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+    <name>classification</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='F09A89AEF0F74FA8BD5ED2F822C0E9A7' and name='major_rev'">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Revision</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <stored_length>8</stored_length>
+    <track_history>0</track_history>
+    <name>major_rev</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='F09A89AEF0F74FA8BD5ED2F822C0E9A7' and name='managed_by_id'">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Managed by</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <track_history>0</track_history>
+    <name>managed_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='F09A89AEF0F74FA8BD5ED2F822C0E9A7' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Owned by</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <track_history>0</track_history>
+    <name>owned_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='F09A89AEF0F74FA8BD5ED2F822C0E9A7' and name='superseded_date'">
+    <column_alignment>left</column_alignment>
+    <data_type>date</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Superseded Date</label>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">F09A89AEF0F74FA8BD5ED2F822C0E9A7</source_id>
+    <track_history>0</track_history>
+    <name>superseded_date</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

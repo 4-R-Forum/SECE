@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="23399B5F6F78431B8BA03EA94304D386" action="add">
+  <additional_data>{"gvdId": "D56CAC767EE845F29B467FDC5C79B9ED"}</additional_data>
+  <image>../Solutions/SA/images/GraphViewOff01.svg</image>
+  <image_additional>../Solutions/SA/images/GraphViewOn01.svg</image_additional>
+  <label xml:lang="en">Function Graph Button</label>
+  <on_click_handler keyed_name="sidebar_default_gv_click" type="Method">AE24D115F1EC41BCB0F7BC47A0EED418</on_click_handler>
+  <tooltip_template xml:lang="en">Function Graph View</tooltip_template>
+  <name>itemview.sidebar.sa.function.showgraph</name>
+ </Item>
+</AML>

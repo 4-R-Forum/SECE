@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<imports>
+	<package name="SDTools" path="SDTools\Import"/>
+	<package name="SEH4" path="SEH4\Import">
+    	<dependson name="com.aras.innovator.solution.PLM" />
+ 	</package>
+	<package name="com.aras.innovator.solution.SA" path="SA\Import" />
+</imports>

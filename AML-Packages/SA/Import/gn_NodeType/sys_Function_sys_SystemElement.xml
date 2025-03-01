@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="gn_NodeType" id="EEC5356440FC4ECC99E15968407F0BE2" action="add">
+  <itemtype_id keyed_name="sys_Function" type="ItemType" name="sys_Function">9E327F81321C4FCF82166CA09A6CFACC</itemtype_id>
+  <name>sys_Function_sys_SystemElement</name>
+  <Relationships>
+   <Item type="gn_NodeTypeProperty" id="0C971CA8C7314F449C4BD12CC95F1DEF" action="add">
+    <name>icon</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_Function_sys_SystemElement" type="gn_NodeType">EEC5356440FC4ECC99E15968407F0BE2</source_id>
+    <value_template>{@icon}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="43091DBA3C044E17A30E2EBBDA4BA541" action="add">
+    <name>keyed_name</name>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_Function_sys_SystemElement" type="gn_NodeType">EEC5356440FC4ECC99E15968407F0BE2</source_id>
+    <value_template>{keyed_name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="38FD52222FBF42718BF3E031EB5F9EB8" action="add">
+    <name>name</name>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_Function_sys_SystemElement" type="gn_NodeType">EEC5356440FC4ECC99E15968407F0BE2</source_id>
+    <value_template>{name}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="C4216C4DBF5C46EAB69F23D0912F8406" action="add">
+    <name>classification</name>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_Function_sys_SystemElement" type="gn_NodeType">EEC5356440FC4ECC99E15968407F0BE2</source_id>
+    <value_template>{classification}</value_template>
+   </Item>
+   <Item type="gn_NodeTypeProperty" id="1651A13B4DA942958940FD5E8943EF73" action="add">
+    <name>version</name>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_Function_sys_SystemElement" type="gn_NodeType">EEC5356440FC4ECC99E15968407F0BE2</source_id>
+    <value_template>{major_rev}.{generation}</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

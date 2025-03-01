@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="gn_GraphViewNode" id="ED790DEB7F8A4DDBA61C091D145D4834" action="add">
+  <end_query_item_id keyed_name="CAD" type="qry_QueryItem">68320107BD754D8192722489B5419B86</end_query_item_id>
+  <node_type_id keyed_name="CAD_sys_SystemElement" type="gn_NodeType">F1A3ACBD118A4E429D37AC377264B8AE</node_type_id>
+  <sort_order>768</sort_order>
+  <source_id keyed_name="System Element Graph View" type="gn_GraphViewDefinition">6D3B587C0D5E473A865739BBC66493D5</source_id>
+  <start_query_item_id keyed_name="CAD" type="qry_QueryItem">68320107BD754D8192722489B5419B86</start_query_item_id>
+ </Item>
+</AML>

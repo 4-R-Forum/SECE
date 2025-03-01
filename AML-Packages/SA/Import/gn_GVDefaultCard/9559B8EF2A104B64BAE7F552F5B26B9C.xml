@@ -1,0 +1,104 @@
+﻿<AML>
+ <Item type="gn_GVDefaultCard" id="9559B8EF2A104B64BAE7F552F5B26B9C" action="add">
+  <itemtype_id keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</itemtype_id>
+  <related_id keyed_name="File_sys_SystemElement" type="gn_ViewCard">
+   <Item type="gn_ViewCard" id="BBCC4F055C1842499D039748FB0F4B90" action="add">
+    <template_definition>{
+	"container":{
+		"type":"grid",
+		"style":{
+			"width":265,
+			"height":56,
+			"color": "#F7F7F7",
+			"padding": {
+				"left": 0.01,
+				"right": 12,
+				"top": 0.01,
+				"bottom": 0.01
+			},
+			"rows": [{"height": 10},{"height": 20},{"height": 23},{"height": 3}],
+			"cols": [{"width": 4},{"width": 4},{"width": 28},{"width": 133},{"width": 30},{"width": 40}],
+			"border": {
+				"width": 1,
+				"color": "#555555",
+				"cornerRadius": 2,
+				"shadow": {
+					"horizontal": 1,
+					"vertical": 2,
+					"color": "#000000",
+					"opacity": 0.4
+				}
+			},
+			"cells": [
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 0,
+					"style": {
+						"backgroundColor": "#AAAAAA"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 1,
+					"style": {
+						"backgroundColor": "#AAAAAA"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 2,
+					"style": {
+						"backgroundColor": "#AAAAAA"
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 0,
+					"row": 3,
+					"style": {
+						"backgroundColor": "#AAAAAA"
+					}
+				},
+				{
+					"content": "image",
+					"content_binding": "icon",
+					"col": 2,
+					"row": 1,
+					"style": {
+						"width": 24,
+						"height": 24
+					}
+				},
+				{
+					"content": "text",
+					"content_binding": "filename",
+					"col": 3,
+					"row": 1,
+					"style": {
+						"font": {
+							"size": 18,
+							"family": "Tahoma",
+							"weight": "bold",
+							"color": "#333333"
+						}
+					}
+				},
+				{
+					"content_binding": "icon",
+					"col": 4,
+					"row": 0
+				}
+			]
+		}
+	}
+}</template_definition>
+    <name>File_sys_SystemElement</name>
+   </Item>
+  </related_id>
+  <sort_order>768</sort_order>
+  <source_id keyed_name="System Element Graph View" type="gn_GraphViewDefinition">6D3B587C0D5E473A865739BBC66493D5</source_id>
+ </Item>
+</AML>

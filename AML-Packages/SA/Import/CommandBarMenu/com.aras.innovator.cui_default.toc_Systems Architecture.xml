@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="5AAFFBE05F5C360C1B1FE36BEE101724" action="add">
+  <label xml:lang="en">Systems Architecture</label>
+  <name>com.aras.innovator.cui_default.toc_Systems Architecture</name>
+ </Item>
+</AML>

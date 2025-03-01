@@ -1,0 +1,78 @@
+﻿<AML>
+ <Item type="Permission" id="60B61A63B43245F7B405DE614B91D475" action="add">
+  <is_private>0</is_private>
+  <name>sys_SystemElement</name>
+  <Relationships>
+   <Item type="Access" id="22FAAC55115543CBA3A25E5BE37F1A51" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+   <Item type="Access" id="585BD9D7513D46EF9AD19C6BCF25B0FA" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+   <Item type="Access" id="735CAEB85F564F538CEBB5FAF9DBE9B1" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+   <Item type="Access" id="9B66797C85404E9882BC79DFE88A3071" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+   <Item type="Access" id="068AD2094C2A49B09C68E800C2B2BA46" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+   <Item type="Access" id="820A201DB8E7406B84AEC1A283BC16F0" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Consumer" type="Identity">DBDB82A32E3D42F9A23485D2955302BE</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="sys_SystemElement" type="Permission">60B61A63B43245F7B405DE614B91D475</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

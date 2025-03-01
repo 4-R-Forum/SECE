@@ -1,0 +1,339 @@
+﻿<AML>
+ <Item type="ItemType" id="265E74E0B4AC4D898D75BB6F1D86C621" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>0</auto_search>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <history_template keyed_name="Default" type="History Template">3BC16EF9E52B4F9792AB76BCE0492F29</history_template>
+  <implementation_type>table</implementation_type>
+  <instance_data>SYS_SYSTEM</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>1</is_versionable>
+  <label xml:lang="en">System</label>
+  <label_plural xml:lang="en">Systems</label_plural>
+  <large_icon>../Solutions/SA/images/System.svg</large_icon>
+  <manual_versioning>1</manual_versioning>
+  <open_icon>../Solutions/SA/images/System.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>0</show_parameters_tab>
+  <structure_view>tabs on</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>sys_System</name>
+  <Relationships>
+   <Item type="DiscussionTemplate" id="11D62F78C12A42E0A55083C48BF17964" action="add">
+    <file_selection_depth>1</file_selection_depth>
+    <item_selection_depth>2</item_selection_depth>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <visibility_supported>1</visibility_supported>
+    <Relationships>
+     <Item type="FeedTemplate" id="E8735790D39F4F00A8CED27B9A32D22F" action="add">
+      <feed_type>Board</feed_type>
+      <reference>this</reference>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="11D62F78C12A42E0A55083C48BF17964" type="DiscussionTemplate">11D62F78C12A42E0A55083C48BF17964</source_id>
+      <Relationships>
+       <Item type="FileSelectorTemplate" id="84F34BCA01A54789A52E5130C81CF237" action="add">
+        <filter>7869D76D50ED4BD4985BECB20B1102F7|50AF497B7A114235979F882CEC8EFDF6|992B142FCE6C4EF8B71417220CD7E92D</filter>
+        <reference><![CDATA[sys_System Files(related_id)]]></reference>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="E8735790D39F4F00A8CED27B9A32D22F" type="FeedTemplate">E8735790D39F4F00A8CED27B9A32D22F</source_id>
+        <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="FeedTemplate" id="8792514C50234CFE8D7CFBB1AA1C2725" action="add">
+      <feed_type>Discussion</feed_type>
+      <reference>sys_System Breakdown(related_id)</reference>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="11D62F78C12A42E0A55083C48BF17964" type="DiscussionTemplate">11D62F78C12A42E0A55083C48BF17964</source_id>
+     </Item>
+     <Item type="DiscussionTemplateView" id="B1ABF59F34C54B4F96D53A3A71B96BC9" action="add">
+      <client>js</client>
+      <related_id keyed_name="43214944E944477C838255AA7B1098CA" type="SSVCPresentationConfiguration">
+       <Item type="SSVCPresentationConfiguration" id="43214944E944477C838255AA7B1098CA" action="add">
+        <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+        <form_tooltip_template xml:lang="en">Form of ${ItemType:label} ${Item:keyed_name}</form_tooltip_template>
+        <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+        <name>43214944E944477C838255AA7B1098CA</name>
+       </Item>
+      </related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="11D62F78C12A42E0A55083C48BF17964" type="DiscussionTemplate">11D62F78C12A42E0A55083C48BF17964</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="ITPresentationConfiguration" id="65D41BC1856B4B23BEBC87F45DC506A5" action="add">
+    <client>js</client>
+    <related_id keyed_name="sys_SystemPC" type="PresentationConfiguration">8C19B50199CE4C8FBB68D02060975E4A</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Property" id="BD5756CE147D4D83825BDB36A18F3E9D" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Description</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="1EA22EBB46EB4E9A9C829B7C6FBC53AF" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="sys_System">15B2788BDE4949C6A03CC1AC55EB0066</data_source>
+    <data_type>sequence</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">System Number</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <track_history>0</track_history>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" id="3321E474C34B48CDB1BAAF9059E43448" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>2</keyed_name_order>
+    <label xml:lang="en">Name</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>name</name>
+   </Item>
+   <Item type="Property" id="EAFC66002C6F469AA352D4C42E1717A5" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Sys_SystemModelingTools">3E3F5B1128FA4A389B40D1F3C5409E8B</data_source>
+    <data_type>list</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Authoring Tool</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>authoring_tool</name>
+   </Item>
+   <Item type="Property" id="EA67C6221CD8445498B9EC9E52403739" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Authoring Tool Version</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>authoring_tool_version</name>
+   </Item>
+   <Item type="Property" id="5668F40ECFC545D3AB9F302F5FF2CDB7" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>1</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External ID</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>external_id</name>
+   </Item>
+   <Item type="Property" id="069A7B3584EE4992AB8390F4BFC78DF8" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External Owner</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>128</stored_length>
+    <track_history>0</track_history>
+    <name>external_owner</name>
+   </Item>
+   <Item type="Property" id="18343B7F1018486C8B4E964CA58A8E32" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">External Type</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>128</stored_length>
+    <track_history>0</track_history>
+    <name>external_type</name>
+   </Item>
+   <Item type="Property" id="E2C457F103EB465AA6A264582FED5567" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>image</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Thumbnail</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <track_history>0</track_history>
+    <name>thumbnail</name>
+   </Item>
+   <Item type="View" id="43CCFC6CC544452C939566F34C02E0D4" action="add">
+    <client>js</client>
+    <related_id keyed_name="sys_System" type="Form">C73F956A9AF14B2EB74504AC46C90BED</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>1</show_ssvc>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="Item Action" id="686D3472877FB91AFCA86F91283C4734" action="add">
+    <related_id keyed_name="Change Discussion Definition" type="Action">5B155B40AD8F405D812EF95BC5848214</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Item Action" id="7F751059B2824D9898F7B582FF50E900" action="add">
+    <related_id keyed_name="VC_AddItemsToBookmarks" type="Action">FD4D2BE9E2B14919BF1973842A556AFD</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="ItemType Life Cycle" id="0C6218F0BE37465491A269C6AB608F71" action="add">
+    <related_id keyed_name="sys_System" type="Life Cycle Map">3D597E021C164A038F297D664437ACEE</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Can Add" id="4DFA9396DF0F4A6EAEE6B787B78AC94D" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Can Add" id="D4929454ADFE4FA99C5A08A858932573" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Can Add" id="2AB6DE09C23E40ACBB375F28428F4A42" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="358ABD633CBA41F88CB1434B5BC77FE7" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="sys_System" type="Permission">7BDE85D510E34A2BBF9EC0B4AE7EEC5D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="265E74E0B4AC4D898D75BB6F1D86C621" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='265E74E0B4AC4D898D75BB6F1D86C621' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Type</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+    <name>classification</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='265E74E0B4AC4D898D75BB6F1D86C621' and name='superseded_date'">
+    <column_alignment>left</column_alignment>
+    <data_type>date</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Superseded Date</label>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+    <track_history>0</track_history>
+    <name>superseded_date</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

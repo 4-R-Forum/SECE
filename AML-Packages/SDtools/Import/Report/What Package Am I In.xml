@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Report" id="C379AA3329364854836FC804C23E69D6" action="add">
+  <location>client</location>
+  <method keyed_name="ShowWhatPackageIAmIn" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>ShowWhatPackageIAmIn</name>
+   </Item>
+  </method>
+  <report_query><![CDATA[<!-- Query in Method ..>]]></report_query>
+  <target>window</target>
+  <type>generic</type>
+  <name>What Package Am I In</name>
+ </Item>
+</AML>

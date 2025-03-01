@@ -1,0 +1,18 @@
+<config-ps>
+<!-- ConsoleUpgrade parameters -->
+
+<param id="0060" hint="innovator release for consoleUpgrade" varname="rel">SECE</param>
+<param id="0070" hint="description for consoleUpgrade, to identify package source in destination database DatabaseUpgrade Item" varname="descr">description="Tag=0.0.0.0"</param>
+<!-- Manifest files -->
+<mf1 id="1010" hint="location of manifest file for consoleUpgrade" varname="mf_imports">imports.mf</mf1>
+<!-- IOM and credentials -->
+
+<!-- AML group 0 to be applied Before importing packages-->
+<param  id="3000" hint="location of first folder containing AML files" varname="aml_path_0">..\..\src\PreProcessing\</param>
+<!--<files0 id="3010">10_PlaceholderScriptFile.xml</files0>-->
+
+<!-- AML group 1 to be applied after importing packages-->
+<param  id="4000" hint="location of first folder containing AML files" varname="aml_path_1">..\..\src\PostProcessing\</param>
+<!--<files1 id="4010">File.xml</files1>-->
+<files1 id="4010">SEH4-DataAdd.xml</files1>
+</config-ps>

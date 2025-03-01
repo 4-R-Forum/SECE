@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="gn_ConnectorType" id="C3B3FEB8536045C1B0E562CF55600BF0" action="add">
+  <name>sys_System_File_sys_Function_1</name>
+  <Relationships>
+   <Item type="gn_ConnectorTypeProperty" id="13D8A09333BA4A5BB7F3031CC7D659A2" action="add">
+    <name>description</name>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System_File_sys_Function_1" type="gn_ConnectorType">C3B3FEB8536045C1B0E562CF55600BF0</source_id>
+    <value_template>system file</value_template>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

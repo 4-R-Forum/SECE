@@ -1,0 +1,52 @@
+﻿<AML>
+ <Item type="Permission" id="40FCDD254D1646A1BC56A9E3B38E0F8A" action="add">
+  <is_private>0</is_private>
+  <name>In Review sys_Function</name>
+  <Relationships>
+   <Item type="Access" id="04186E53D5694C1D989246DCB76687D8" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineering Administrator" type="Identity">D35E3594A90D40C59B5B2E9777D8EBC5</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="In Review sys_Function" type="Permission">40FCDD254D1646A1BC56A9E3B38E0F8A</source_id>
+   </Item>
+   <Item type="Access" id="1D6852E5225C40E9BBEA3E9AC95C5FC0" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Systems Engineer" type="Identity">03DDE295D20446F6B6599B40F4CF2924</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="In Review sys_Function" type="Permission">40FCDD254D1646A1BC56A9E3B38E0F8A</source_id>
+   </Item>
+   <Item type="Access" id="22C28B7F10C548369901C13D6A214B0E" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Consumer" type="Identity">DBDB82A32E3D42F9A23485D2955302BE</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="In Review sys_Function" type="Permission">40FCDD254D1646A1BC56A9E3B38E0F8A</source_id>
+   </Item>
+   <Item type="Access" id="27FF180C58374A6AB13999BD1829369F" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Systems Engineering Manager" type="Identity">18D154535A5E4CC1A586AD227B43BC8A</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="In Review sys_Function" type="Permission">40FCDD254D1646A1BC56A9E3B38E0F8A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

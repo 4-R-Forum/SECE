@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="List" id="93ECE3D26DA4402BB346A3C3FBFABA42" action="add">
+  <name>sys_Leading_Discipline</name>
+  <Relationships>
+   <Item type="Value" id="C312D3CAB1D440B4B86FECE0AB44F2C0" action="add">
+    <label xml:lang="en">Mechanical</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_Leading_Discipline" type="List">93ECE3D26DA4402BB346A3C3FBFABA42</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="AAE2503A8A3E499CAB3D8E1D11DCD1F9" action="add">
+    <label xml:lang="en">Electrical</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_Leading_Discipline" type="List">93ECE3D26DA4402BB346A3C3FBFABA42</source_id>
+    <value>2</value>
+   </Item>
+   <Item type="Value" id="99017F495EDD4B9C901E85A127DCE38D" action="add">
+    <label xml:lang="en">Electronics</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_Leading_Discipline" type="List">93ECE3D26DA4402BB346A3C3FBFABA42</source_id>
+    <value>3</value>
+   </Item>
+   <Item type="Value" id="E06450129D094E2A8C055BC7E096FB36" action="add">
+    <label xml:lang="en">Software</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sys_Leading_Discipline" type="List">93ECE3D26DA4402BB346A3C3FBFABA42</source_id>
+    <value>4</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="Method" id="2B349B3EAB5F42EABD7B43EA6FC62B00" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[Item test_item = this.newItem("Part");
+test_item.setID("59A061E80CD6464AAE2FF070492B0999");
+test_item.setProperty("description","B-52 Superfortress Type H");
+test_item.setProperty("grant_identity","Aras PLM");
+return test_item.apply("EditNoVersion");]]></method_code>
+  <method_type>C#</method_type>
+  <name>test_EditNoVersion</name>
+ </Item>
+</AML>

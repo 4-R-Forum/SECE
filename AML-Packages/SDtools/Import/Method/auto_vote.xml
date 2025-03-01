@@ -1,0 +1,119 @@
+﻿<AML>
+ <Item type="Method" id="DD3AC2653E844B899D2FCBBFC6CDD0EB" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[// if (System.Diagnostics.Debugger.Launch()) System.Diagnostics.Debugger.Break();
+// adapted from mh_generic_evaluate_WF_activity
+// golbal variables
+Innovator innov = this.getInnovator();
+CultureInfo ccult = CultureInfo.CurrentCulture;
+DateTime currentDate = DateTime.Now;
+string toStringDate = currentDate.ToString(ccult);
+I18NSessionContext cntx = innov.getI18NSessionContext();
+string currentDateString = cntx.ConvertToNeutral(toStringDate, "date", null);
+string msg ="OK";
+
+// get Method arguments passed to this Generic Method
+string controlledItemId = this.getProperty("controlledItemId");
+string controlledItemType = this.getProperty("controlledItemType");
+string pathName = this.getProperty("path");
+string votingIdentityName = this.getProperty("votingIdentity"); // Identity name for auto testing
+// get the controlled Item
+ Item controlledItem = innov.getItemById(controlledItemType, controlledItemId);
+// get the Workflow for the controlled Item
+/// TODO rewrite Worflow query as AML so that all ids can be gathered in a single call
+Item workflow = innov.newItem("Workflow", "get");
+workflow.setProperty("source_id", controlledItemId);
+workflow.setAttribute("select", "related_id");
+Item workflowProcess = workflow.createRelatedItem("Workflow Process", "get");
+workflowProcess.setAttribute("select", "id");
+Item workflowProcessActivity = workflowProcess.createRelationship("Workflow Process Activity", "get");
+workflowProcessActivity.setAttribute("select", "related_id");
+Item activityForWorkflow = workflowProcessActivity.createRelatedItem("Activity", "get");
+activityForWorkflow.setProperty("state", "Active");
+activityForWorkflow.setAttribute("select", "id");
+
+var result = workflow.apply();
+
+if(result.isError() && !result.isEmpty()){
+    throw new Aras.Server.Core.InnovatorServerException("Current workflow not setup properly.");
+}
+// get the target Activity
+string activityId = result.getItemByIndex(0)?.getRelatedItem()?.getRelationships("Workflow Process Activity").getItemByIndex(0)?.getRelatedItem()?.getID();
+
+Item activity = innov.getItemById("Activity", activityId);
+// supress wait wait_for_all_votes if set, so that a single vote completes activity
+activity.setProperty("wait_for_all_votes", "0");
+// complete all tasks
+Item reqTasks = this.newItem("Activity Task");
+reqTasks.setProperty("source_id", activityId);
+reqTasks.setProperty("is_required", "1");
+reqTasks = reqTasks.apply("get");
+int taskCount = reqTasks.getItemCount();
+string taskAML = "<Tasks>";
+
+if (taskCount > 0){
+    for (int i = 0; i < taskCount; i ++ ){
+        Item reqTask = reqTasks.getItemByIndex(i);
+        string temp = "<Task id = '{0}' completed='1'/>\n";
+        string insertTask = string.Format(ccult, temp, reqTask.getID()); 
+        taskAML += insertTask;
+    }
+}
+taskAML += "</Tasks>";
+// get the assginment
+Item wfProcessAsst = this.newItem("Activity Assignment");
+wfProcessAsst.setProperty("source_id", activityId);
+wfProcessAsst = wfProcessAsst.apply("get");
+string asstId = wfProcessAsst.getID();
+// get the target path to vote
+//if (System.Diagnostics.Debugger.Launch()) System.Diagnostics.Debugger.Break();
+Item wfProcessPath = this.newItem("Workflow Process Path");
+wfProcessPath.setProperty("source_id", activityId);
+wfProcessPath.setProperty("name", pathName);
+wfProcessPath = wfProcessPath.apply("get");
+string pathId = wfProcessPath.getID();
+// set comment 
+string comment = "Completed by auto_vote for testing";
+
+// Grand Identity for voting Identity
+Aras.Server.Security.Identity votingIdentityId = Aras.Server.Security.Identity.GetByName(votingIdentityName);
+bool PermissionWasSet  =  Aras.Server.Security.Permissions.GrantIdentity(votingIdentityId);
+// AML template to invoke EvaluateActivity, ie vote for Wokflow Assignment
+string AML1=@"
+<AML>
+<Item type='Activity' action='EvaluateActivity'>
+    <Activity>{0}</Activity>
+    <ActivityAssignment>{1}</ActivityAssignment>
+    <Paths>
+        <Path id='{2}' />
+    </Paths>
+    <DelegateTo>0</DelegateTo>
+    {3}
+    <Variables/>
+    <Authentication mode=''/>
+    <Comments>{4}</Comments>
+    <Complete>1</Complete>
+</Item>
+</AML>";
+// Apply substitutions to AML and apply
+string AML2 = string.Format(ccult, AML1, activityId, asstId, pathId, taskAML, comment);
+//if (System.Diagnostics.Debugger.Launch()) System.Diagnostics.Debugger.Break();
+try {
+    Item res1 = innov.applyAML(AML2);
+}
+catch (Exception e)
+{
+    msg = e.Message;
+    return innov.newError(msg);
+} 
+    
+// revoke Grand Identity
+if (PermissionWasSet){
+     Aras.Server.Security.Permissions.RevokeIdentity(votingIdentityId);
+}
+return innov.newResult(msg); // return a string OK to simplify verification of successful result
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>auto_vote</name>
+ </Item>
+</AML>

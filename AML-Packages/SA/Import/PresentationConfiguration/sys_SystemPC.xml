@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="PresentationConfiguration" id="8C19B50199CE4C8FBB68D02060975E4A" action="add">
+  <color>#F57C00</color>
+  <name>sys_SystemPC</name>
+  <Relationships>
+   <Item type="PresentationCommandBarSection" id="6E2AF67B13F14BC8ACED0331E08813BC" action="add">
+    <related_id keyed_name="itemview.sidebar.sa.system" type="CommandBarSection">C9364E10B336405E9BF4DEE56AB567B6</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sys_SystemPC" type="PresentationConfiguration">8C19B50199CE4C8FBB68D02060975E4A</source_id>
+   </Item>
+   <Item type="PresentationCommandBarSection" id="257013350BBB8C4CBDEE61C462534D75" action="add">
+    <related_id keyed_name="sys_System_TOC_Content" type="CommandBarSection">257013350BBB8C4C618120D9625E4BB8</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sys_SystemPC" type="PresentationConfiguration">8C19B50199CE4C8FBB68D02060975E4A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

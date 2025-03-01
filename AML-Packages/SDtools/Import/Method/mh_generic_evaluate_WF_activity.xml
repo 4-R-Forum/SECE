@@ -1,0 +1,130 @@
+﻿<AML>
+ <Item type="Method" id="4AA80EF29DF145E58A062C86C64A07B6" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[Innovator innov = this.getInnovator();
+
+CultureInfo ccult = CultureInfo.CurrentCulture;
+
+DateTime currentDate = DateTime.Now;
+string toStringDate = currentDate.ToString(ccult);
+I18NSessionContext cntx = innov.getI18NSessionContext();
+string currentDateString = cntx.ConvertToNeutral(toStringDate, "date", null);
+
+string controlledItemId = this.getProperty("itemId");
+string controlledItemType = this.getProperty("itemType");
+string pathName = this.getProperty("path");
+string reason = this.getProperty("reason");
+
+ Item controlledItem = innov.getItemById(controlledItemType, controlledItemId);
+
+Item workflow = innov.newItem("Workflow", "get");
+workflow.setProperty("source_id", controlledItemId);
+workflow.setAttribute("select", "related_id");
+Item workflowProcess = workflow.createRelatedItem("Workflow Process", "get");
+workflowProcess.setAttribute("select", "id");
+Item workflowProcessActivity = workflowProcess.createRelationship("Workflow Process Activity", "get");
+workflowProcessActivity.setAttribute("select", "related_id");
+Item activityForWorkflow = workflowProcessActivity.createRelatedItem("Activity", "get");
+activityForWorkflow.setProperty("state", "Active");
+activityForWorkflow.setAttribute("select", "id");
+
+var result = workflow.apply();
+
+if(result.isError() && !result.isEmpty()){
+    throw new Aras.Server.Core.InnovatorServerException("Current workflow not setup properly.");
+}
+string activityId = result.getItemByIndex(0)?.getRelatedItem()?.getRelationships("Workflow Process Activity").getItemByIndex(0)?.getRelatedItem()?.getID();
+
+Item activity = innov.getItemById("Activity", activityId);
+
+activity.setProperty("wait_for_all_votes", "0");
+
+Item reqTasks = this.newItem("Activity Task");
+reqTasks.setProperty("source_id", activityId);
+reqTasks.setProperty("is_required", "1");
+reqTasks = reqTasks.apply("get");
+int taskCount = reqTasks.getItemCount();
+string taskAML = "<Tasks>";
+
+if (taskCount > 0){
+    for (int i = 0; i < taskCount; i ++ ){
+        Item reqTask = reqTasks.getItemByIndex(i);
+        string temp = "<Task id = '{0}' completed='1'/>\n";
+        string insertTask = string.Format(ccult, temp, reqTask.getID()); 
+        taskAML += insertTask;
+    }
+}
+taskAML += "</Tasks>";
+
+Item wfProcessPath = this.newItem("Workflow Process Path");
+wfProcessPath.setProperty("source_id", activityId);
+wfProcessPath.setProperty("name", pathName);
+wfProcessPath = wfProcessPath.apply("get");
+string pathId = wfProcessPath.getID();
+
+string comment = "";
+string proxyId = "DBA5D86402BF43D5976854B8B48FCDD1"; //default Innov Admin
+switch (reason) {
+    case "Suspense Rule":
+        comment = "Completed by Suspense Rule";
+        proxyId = "8D0CF0F6AEA94952AE1FE1956E59FF51"; //Suspense Rule User
+        break;
+    case "Advance Deliverable":
+        comment = " Auto route Deliverable to IPT Lead";
+        break;
+    case "Advance Deliverable To Disp":
+        comment = "Auto route Deliverable to Disposition";
+        // proxyId = "43081435ADC94DEFB4C5954577ED5BE7"; //MH WF Agent
+        break;
+}
+Item proxyAssn = this.newItem("Activity Assignment");
+proxyAssn.setProperty("source_id", activityId);
+proxyAssn.setProperty("related_id", proxyId);
+proxyAssn = proxyAssn.apply("add");
+string proxyAssnID = proxyAssn.getID();
+ 
+//Set Required Properties that have to be added during WF if not present
+switch (controlledItemType){
+    case "MH Assistance Request":
+        if (reason == "Suspense Rule"){
+            string assignee = controlledItem.getProperty("mh_assignee");
+            if (string.IsNullOrEmpty(assignee)) controlledItem.setProperty("mh_assignee", proxyId);
+            string promiseDate = controlledItem.getProperty("mh_promise_date");
+            if (string.IsNullOrEmpty(promiseDate)) controlledItem.setProperty("mh_promise_date", currentDateString);
+            controlledItem = controlledItem.apply("edit");
+        }
+        break;
+}
+
+Aras.Server.Security.Identity adminIdentity = Aras.Server.Security.Identity.GetByName("Innovator Admin");
+bool PermissionWasSet  = Aras.Server.Security.Permissions.GrantIdentity(adminIdentity);
+
+string AML1=@"
+<AML>
+<Item type='Activity' action='EvaluateActivity'>
+    <Activity>{0}</Activity>
+    <ActivityAssignment>{1}</ActivityAssignment>
+    <Paths>
+        <Path id='{2}'>
+            <![CDATA[{3}]]]]><![CDATA[>
+        </Path>
+    </Paths>
+    <DelegateTo>0</DelegateTo>
+    {4}
+    <Variables/>
+    <Authentication mode=''/>
+    <Comments>{5}</Comments>
+    <Complete>1</Complete>
+</Item>
+</AML>";
+
+string AML2 = string.Format(ccult, AML1, activityId, proxyAssnID, pathId, pathName, taskAML, comment); 
+Item res1 = innov.applyAML(AML2);
+if (PermissionWasSet){
+    Aras.Server.Security.Permissions.RevokeIdentity(adminIdentity);
+}
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>mh_generic_evaluate_WF_activity</name>
+ </Item>
+</AML>

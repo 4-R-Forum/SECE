@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="Sequence" id="8221A232B9DF4EBE91D6B3185FA86305" action="add">
+  <initial_value>0</initial_value>
+  <pad_to>8</pad_to>
+  <pad_with>0</pad_with>
+  <prefix>SE-</prefix>
+  <suffix />
+  <name>sys_SystemElement</name>
+ </Item>
+</AML>

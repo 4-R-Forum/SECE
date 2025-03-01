@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="gn_ConnectorViewDefinition" id="6C1F28AF831148729AFE443CBD56EF33" action="add">
+  <name>Function Common Connector View Definition</name>
+  <Relationships>
+   <Item type="gn_ConnectorViewTemplate" id="33C63AD02DBB4CFFB4E00C88690E4EA8" action="add">
+    <related_id keyed_name="Function Common Connector View Card" type="gn_ViewCard">4595458A709E4451A15A260F43B8B9A4</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Function Common Connector View Definition" type="gn_ConnectorViewDefinition">6C1F28AF831148729AFE443CBD56EF33</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
