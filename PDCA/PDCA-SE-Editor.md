@@ -15,10 +15,25 @@ PDCA SE-Editor
     - Open the se_controlled item
 - for the system (context menu in white space)
     - Create a new process from template
-- Add context menu to existing report  see sample code folder
+- Add context menu to existing report  see sample code folder 1.1
     - add data_items in svg
     - add style and scripts from Client/Customer
     - add context menu in div in report method
+- Alternative menus 1.2
+    - Different menus for nodes Process and SECI
+        - add type to title in server method, more code to get edges right
+        - add attribute in client method, call to server for each node (selected)
+    - get type and id
+    - invoke IOM
 
 ## DO
-- se_editor js and css files show context menu
+- se_editor js and css files show context menu 1.1
+- explore menu option context in debugger
+    - top.aras is the aras object with IomInnovator and ItemsCache properties
+- menu options set in client method 1.2
+
+## CHECK
+- 1.1 test successful, context menu shows and executes code on select item
+    - click out of node -> default context menu
+    - error message on close "The method 'cui_svicm_reports_click' failed"
+- 1.2 menu options working, type and id attr in svg,  error message on close resolved

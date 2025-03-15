@@ -2,7 +2,7 @@
  <Item type="Method" id="A21BDBA04B534B92B3F3B061497617B2" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
   <method_code><![CDATA[
-//debugger;
+
 var svgString  = this.apply("SystemReportServer").getResult();
 // Parse the string into a DOM structure
 const parser = new DOMParser();
@@ -10,8 +10,23 @@ const xmlDoc = parser.parseFromString(svgString, "image/svg+xml");
 
 // Select all elements with the "node" attribute
 xmlDoc.querySelectorAll(".node").forEach(el => {
-    //el.childNodes[1].setAttribute("data-options", "['Open', 'Add IO', 'New IO']");
-		el.setAttribute("data-options", "[\"Open\", \"Add IO\", \"New IO\"]");
+		// set attributes for se_editor, type, id, options fro menu
+		let this_xid = el.childNodes[0];
+		let this_id = this_xid.textContent.replace("x","");
+		let this_type = "SE Controlled Item";
+		let seci = this.newItem("SE Controlled Item");
+		seci.setID(this_id);
+		seci.setAttribute("select","id");
+		let res = seci.apply("get");
+		if (res.isError()) {
+			this_type = "SE Process";
+			el.setAttribute("data-options", "[\"Open\", \"New Process\"]");			 
+		}
+		else {
+			el.setAttribute("data-options", "[\"Open\", \"Add IO\", \"New IO\"]");
+		};
+		el.setAttribute("this_type",this_type);
+		el.setAttribute("this_id",this_id);
 });
 
 // Serialize it back to string
@@ -49,7 +64,8 @@ var options ="status=no,toolbar=no,menubar=no,titlebar=yes,resizable=yes,scrollb
 //var myWindow = window.open("", "System Report", options);
 //myWindow.document.write(html);
 //return true;
-return html;]]></method_code>
+return html;
+]]></method_code>
   <method_type>JavaScript</method_type>
   <name>show_se_process_report</name>
  </Item>
