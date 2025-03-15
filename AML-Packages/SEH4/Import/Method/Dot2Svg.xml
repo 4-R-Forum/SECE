@@ -1,0 +1,77 @@
+﻿<AML>
+ <Item type="Method" id="D1DDDBA478384DB8A12A2385DA4872BB" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[// adapted from v12 DMDiagram2
+Innovator innov = this.getInnovator();
+//string dot = this.getProperty("dot"); // dot language to be converted to svg, passed in body
+string dot = this.dom.InnerText; /// TODO why is generic method not working as expected
+string dot_loc=  @"""C:\Program Files\Graphviz\bin\dot.exe"""; // location of Graphviz
+string temp_loc= @"temp\"; // server location to write and read files, for dotNet core in Innovator/Server
+//dot="digraph g{"+dot+"}"; // wrap nodes and edges in a directed graph
+string fn=temp_loc+innov.getNewID(); // filename with a unique ID
+string m=""; // msg for debugging
+bool debug = false; // for debugging
+//if (System.Diagnostics.Debugger.Launch()) System.Diagnostics.Debugger.Break();
+try 
+{
+	using (StreamWriter sw = new StreamWriter(fn+".dot")) 
+	{
+		// save dot as a file
+		sw.Write(dot);
+		sw.Close();
+	}
+}
+catch (Exception e)
+{
+	m="Cannot save dot. " + fn + " "+e.Message;
+	// CallContext.Logger.WriteDebug("DebugDMDiag", m); //TODO refactor for dotNet core
+	return innov.newError(m);
+}
+string result2=""; // to hold resulting svg
+string d = ""; // global, required for process
+int    n = 0;  // global, required for process
+try 
+{       
+    bool ok = false;
+    d=@" -Tsvg -o"""+fn+@".svg"" """+fn+@".dot""";
+    System.Diagnostics.Process p = new System.Diagnostics.Process();
+    p.StartInfo=  new System.Diagnostics.ProcessStartInfo( dot_loc, d);
+    ok=p.Start();
+    if (debug)
+    {
+       m= ok ? "Dot started " + dot_loc+ d: "Dot not started";
+       //CallContext.Logger.WriteDebug("DebugDMDiag",  m); //TODO refactor for dotNet core
+	    return innov.newError(m);
+    }
+	while (!p.HasExited) { n+=1; System.Threading.Thread.Sleep(1); }
+	
+	using (StreamReader sr = new StreamReader(fn+".svg")) 
+	{
+		result2 =sr.ReadToEnd();
+		sr.Close();
+	}
+}
+catch (Exception e)
+{
+	m="Save svg failed. "+e.Message;
+	return innov.newError(m);
+}
+System.Threading.Thread.Sleep(100);
+debug=false;
+if (! debug)
+{
+    File.Delete(fn+".dot");
+    File.Delete(fn+".svg");
+}
+int s=result2.IndexOf("<svg");
+result2=result2.Substring(s);
+string pan_zoom=@"<text  x=""4"" y=""14"" font-family=""Arial"" font-size=""14.00"">Drag to Pan, ScrollWheel to Zoom</text>";
+result2=result2.Replace("</svg>", pan_zoom+"</svg>");
+result2=result2.Replace(@"&amp;#160;",""); // remove entity from datestamp
+result2=result2.Replace("\r\n","");
+
+return innov.newResult(result2);]]></method_code>
+  <method_type>C#</method_type>
+  <name>Dot2Svg</name>
+ </Item>
+</AML>

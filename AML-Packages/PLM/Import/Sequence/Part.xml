@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="Sequence" id="1B933B4CD18F4CCE98024CAD1E1B9302" action="add">
+  <initial_value>2000</initial_value>
+  <pad_to>3</pad_to>
+  <pad_with>0</pad_with>
+  <prefix>P-</prefix>
+  <name>Part</name>
+ </Item>
+</AML>

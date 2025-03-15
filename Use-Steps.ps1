@@ -23,8 +23,7 @@ switch ($step) {
             if ($resp.ToUpper() -ne 'Y') { Exit }
             Connect-Innov 'root'
             Restore-Database
-            Import-Packages
-        }   
+    }
     2   {
             # uses sql sa login
             Export-ConfigReport

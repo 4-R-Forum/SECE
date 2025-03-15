@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Dynamic Context Menu</title>
+    <style>
+        svg {
+            border: 1px solid black;
+        }
+        .context-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid gray;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 5px;
+        }
+        .context-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .context-menu ul li {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .context-menu ul li:hover {
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <svg width="300" height="200">
+        <rect id="shape1" x="50" y="50" width="100" height="100" fill="blue" data-options='["Resize", "Change Color", "Delete"]' />
+        <circle id="shape2" cx="200" cy="100" r="50" fill="red" data-options='["Expand", "Shrink", "Delete"]' />
+    </svg>
+
+    <div id="contextMenu" class="context-menu">
+        <ul id="menuItems"></ul>
+    </div>
+
+    <script> 
+        const contextMenu = document.getElementById("contextMenu");
+        const menuItems = document.getElementById("menuItems");
+        let currentTarget = null;
+
+        document.querySelectorAll("svg rect, svg circle").forEach(shape => {
+            shape.addEventListener("contextmenu", (event) => {
+                event.preventDefault();
+                currentTarget = event.target;
+
+                // Clear previous menu options
+                menuItems.innerHTML = "";
+
+                // Get dynamic options from the shape's data attribute
+                const options = JSON.parse(currentTarget.getAttribute("data-options"));
+                options.forEach(option => {
+                    const li = document.createElement("li");
+                    li.textContent = option;
+                    li.onclick = () => menuAction(option);
+                    menuItems.appendChild(li);
+                });
+
+                // Show menu at cursor position
+                contextMenu.style.left = `${event.pageX}px`;
+                contextMenu.style.top = `${event.pageY}px`;
+                contextMenu.style.display = "block";
+            });
+        });
+
+        document.addEventListener("click", () => {
+            contextMenu.style.display = "none"; // Hide menu on outside click
+        });
+
+        function menuAction(option) {
+            alert(`Selected: ${option} for ${currentTarget.id}`);
+            contextMenu.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+svg {
+    border: 1px solid black;
+}
+.context-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+.context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.context-menu ul li {
+    padding: 5px;
+    cursor: pointer;
+}
+.context-menu ul li:hover {
+    background: lightgray;
+}
+svg {
+    pointer-events: none; /* Prevents the outer svg <svg> from blocking events */
+}
+g.graph {
+    pointer-events: none; /* Prevents the outer graph <g> from blocking events */
+}
+g.node {
+    pointer-events: auto; /* Allows clicking on inner <g> elements */
+}

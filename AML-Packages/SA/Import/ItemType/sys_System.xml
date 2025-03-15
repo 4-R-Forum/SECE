@@ -1,7 +1,7 @@
 ﻿<AML>
  <Item type="ItemType" id="265E74E0B4AC4D898D75BB6F1D86C621" action="add">
   <allow_private_permission>1</allow_private_permission>
-  <auto_search>0</auto_search>
+  <auto_search>1</auto_search>
   <enforce_discovery>1</enforce_discovery>
   <hide_where_used>0</hide_where_used>
   <history_template keyed_name="Default" type="History Template">3BC16EF9E52B4F9792AB76BCE0492F29</history_template>
@@ -290,6 +290,11 @@
    <Item type="Allowed Permission" id="358ABD633CBA41F88CB1434B5BC77FE7" action="add">
     <is_default>1</is_default>
     <related_id keyed_name="sys_System" type="Permission">7BDE85D510E34A2BBF9EC0B4AE7EEC5D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
+   </Item>
+   <Item type="Item Report" id="D4F4114FEDF34607A9B3AC482D1AA74C" action="add">
+    <related_id keyed_name="System Process Report" type="Report">C4CA8834F6DE46F9B8BA4D4921184B42</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="sys_System" type="ItemType" name="sys_System">265E74E0B4AC4D898D75BB6F1D86C621</source_id>
    </Item>

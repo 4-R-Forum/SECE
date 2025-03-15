@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="Sequence" id="7571B65E2361471CAA7DB7807B057735" action="add">
+  <initial_value>3000</initial_value>
+  <pad_to>3</pad_to>
+  <pad_with>0</pad_with>
+  <prefix>D-</prefix>
+  <name>Document</name>
+ </Item>
+</AML>

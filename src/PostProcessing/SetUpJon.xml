@@ -1,0 +1,36 @@
+<AML>
+	<Item type="User" id="6C893E9809C8411C9C940EE0F7A7E6FF" action="add">
+		<email>jhodge@4-R-Forum.org</email>
+		<login_name>jhodge</login_name>
+		<password>607920b64fe136f9ab2389e371852af2</password>
+		<logon_enabled>1</logon_enabled>
+		<first_name>Jon</first_name>
+		<last_name>Hodge</last_name>
+	</Item>
+	<Item type="Identity" action="edit" where="[Identity].name='Administrators'">
+		<Relationships>
+			<Item type="Member" action="add">
+				<related_id>
+					<Item type="Identity" action="get">
+						<name>Jon Hodge</name>
+					</Item>
+				</related_id>
+			</Item>
+		</Relationships>
+	</Item>
+	<Item type="Identity" action="edit" where="[Identity].name in ('Systems Engineering Administrator','Change Specialist I','Change Specialist II','Change Specialist III','Project Management','All Employees')">
+		<Relationships>
+			<Item type="Member" action="add">
+				<related_id>
+					<Item type="Identity" action="get">
+						<name>Administrators</name>
+					</Item>
+				</related_id>
+			</Item>
+		</Relationships>
+	</Item>
+	<Item type="Variable" action="add">
+		<name>CorporateTimeZone</name>
+		<value>Eastern Standard Time</value>
+	</Item>
+</AML>
