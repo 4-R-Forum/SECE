@@ -35,7 +35,7 @@
       <column_width>400</column_width>
       <data_source>
        <Item type="Property" action="get" select="id">
-        <name>se_input_id</name>
+        <name>se_io_id</name>
         <source_id>6E623A6BBF454DBFBA66FBB2D4A0136A</source_id>
        </Item>
       </data_source>
@@ -118,13 +118,25 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>0</is_required>
       <item_behavior>float</item_behavior>
-      <label xml:lang="en">se_input_id</label>
+      <label xml:lang="en">se_io_id</label>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>3584</sort_order>
       <source_id keyed_name="SE Input" type="ItemType" name="SE Input">6E623A6BBF454DBFBA66FBB2D4A0136A</source_id>
       <track_history>0</track_history>
-      <name>se_input_id</name>
+      <name>se_io_id</name>
+      <Relationships>
+       <Item type="Grid Event" id="3D9D25FF0EB1491DA33991A8F3D59BD6" action="add">
+        <grid_event>onsearchdialog</grid_event>
+        <related_id keyed_name="se_input_osd" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>se_input_osd</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="se_io_id" type="Property">198EEE901AF34CC7880F1198B11754DC</source_id>
+       </Item>
+      </Relationships>
      </Item>
      <Item type="View" id="A80F167C0C9A43C289CC30D8D8DF7C4C" action="add">
       <client>js</client>

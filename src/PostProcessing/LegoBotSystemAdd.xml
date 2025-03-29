@@ -1,0 +1,452 @@
+<AML>
+	<Item action="merge" type="sys_System" typeId="265E74E0B4AC4D898D75BB6F1D86C621" id="C27D19AFCC2D470BB4F216C8B459D955">
+		<config_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</config_id>
+		<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+		<created_on>2025-03-08T18:20:55</created_on>
+		<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">85252265ADC94EA0BD2586DC7A27952C</current_state>
+		<generation>1</generation>
+		<id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</id>
+		<is_current>1</is_current>
+		<is_released>0</is_released>
+		<keyed_name>SYS-000001 LegoBot</keyed_name>
+		<major_rev>A</major_rev>
+		<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+		<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+		<modified_on>2025-03-10T19:04:40</modified_on>
+		<new_version>1</new_version>
+		<not_lockable>0</not_lockable>
+		<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+		<state>Preliminary</state>
+		<item_number>SYS-000001</item_number>
+		<name>LegoBot</name>
+		<itemtype>265E74E0B4AC4D898D75BB6F1D86C621</itemtype>
+		<Relationships>
+			<Item action="merge" type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="E73F7F29C3F2449D8AE451D4ABF55CC3">
+				<behavior>float</behavior>
+				<config_id keyed_name="E73F7F29C3F2449D8AE451D4ABF55CC3" type="sys_System Breakdown">E73F7F29C3F2449D8AE451D4ABF55CC3</config_id>
+				<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+				<created_on>2025-03-08T18:20:55</created_on>
+				<generation>1</generation>
+				<id keyed_name="E73F7F29C3F2449D8AE451D4ABF55CC3" type="sys_System Breakdown">E73F7F29C3F2449D8AE451D4ABF55CC3</id>
+				<is_current>1</is_current>
+				<is_released>0</is_released>
+				<keyed_name>E73F7F29C3F2449D8AE451D4ABF55CC3</keyed_name>
+				<major_rev>A</major_rev>
+				<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+				<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+				<modified_on>2025-03-08T18:20:55</modified_on>
+				<new_version>1</new_version>
+				<not_lockable>0</not_lockable>
+				<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+				<related_id keyed_name="SE-00000001 Frame" type="sys_SystemElement">
+					<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="DD0F653C556E481AAD410D21193FD1AE">
+						<classification>Internal System</classification>
+						<config_id keyed_name="SE-00000001 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</config_id>
+						<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+						<created_on>2025-03-08T18:20:55</created_on>
+						<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+						<description>Built using standard Lego plus custom parts listed in Structure</description>
+						<generation>1</generation>
+						<id keyed_name="SE-00000001 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</id>
+						<is_current>1</is_current>
+						<is_released>0</is_released>
+						<keyed_name>SE-00000001 Frame</keyed_name>
+						<major_rev>A</major_rev>
+						<make_buy>1</make_buy>
+						<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+						<modified_on>2025-03-10T17:28:01</modified_on>
+						<new_version>1</new_version>
+						<not_lockable>0</not_lockable>
+						<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+						<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+						<state>Preliminary</state>
+						<sys_leading_discipline>1</sys_leading_discipline>
+						<item_number>SE-00000001</item_number>
+						<name>Frame</name>
+						<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+						<Relationships>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="90AAFB700C4942FD911C651F564294A4">
+								<id keyed_name="90AAFB700C4942FD911C651F564294A4" type="sys_SystemElement Structure">90AAFB700C4942FD911C651F564294A4</id>
+								<related_id keyed_name="SE-00000009 MotorController Bracket" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="BBCDCA5902BD44409042C1EC9CD842DA">
+										<classification>Component</classification>
+										<config_id keyed_name="SE-00000009 MotorController Bracket" type="sys_SystemElement">BBCDCA5902BD44409042C1EC9CD842DA</config_id>
+										<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+										<created_on>2025-03-10T17:23:12</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<generation>1</generation>
+										<id keyed_name="SE-00000009 MotorController Bracket" type="sys_SystemElement">BBCDCA5902BD44409042C1EC9CD842DA</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000009 MotorController Bracket</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>1</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T17:33:18</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>1</sys_leading_discipline>
+										<item_number>SE-00000009</item_number>
+										<name>MotorController Bracket</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000001 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</source_id>
+							</Item>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="4639BBAA8A9D4F678856C6F2A5F0B2BB">
+								<id keyed_name="4639BBAA8A9D4F678856C6F2A5F0B2BB" type="sys_SystemElement Structure">4639BBAA8A9D4F678856C6F2A5F0B2BB</id>
+								<related_id keyed_name="SE-00000010 Roller Foot" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="916862BDE448412F9B913956253F912A">
+										<classification>Internal System</classification>
+										<config_id keyed_name="SE-00000010 Roller Foot" type="sys_SystemElement">916862BDE448412F9B913956253F912A</config_id>
+										<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+										<created_on>2025-03-10T17:28:01</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<generation>1</generation>
+										<id keyed_name="SE-00000010 Roller Foot" type="sys_SystemElement">916862BDE448412F9B913956253F912A</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000010 Roller Foot</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>1</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T17:28:01</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>1</sys_leading_discipline>
+										<item_number>SE-00000010</item_number>
+										<name>Roller Foot</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000001 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</source_id>
+							</Item>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="2EC9A0B6823B4931AC72E4D09C7673EE">
+								<id keyed_name="2EC9A0B6823B4931AC72E4D09C7673EE" type="sys_SystemElement Structure">2EC9A0B6823B4931AC72E4D09C7673EE</id>
+								<related_id keyed_name="SE-00000011 Gyro Clip" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="F4587A25B7594E239B113090DF4747BC">
+										<classification>Internal System</classification>
+										<config_id keyed_name="SE-00000011 Gyro Clip" type="sys_SystemElement">F4587A25B7594E239B113090DF4747BC</config_id>
+										<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+										<created_on>2025-03-10T17:28:01</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<generation>1</generation>
+										<id keyed_name="SE-00000011 Gyro Clip" type="sys_SystemElement">F4587A25B7594E239B113090DF4747BC</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000011 Gyro Clip</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>1</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T17:53:11</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>1</sys_leading_discipline>
+										<item_number>SE-00000011</item_number>
+										<name>Gyro Clip</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000001 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</source_id>
+							</Item>
+						</Relationships>
+					</Item>
+				</related_id>
+				<sort_order>128</sort_order>
+				<source_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+			</Item>
+			<Item action="merge" type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="4039ED56277149BA9F9D37A23A9CDD6E">
+				<behavior>float</behavior>
+				<config_id keyed_name="4039ED56277149BA9F9D37A23A9CDD6E" type="sys_System Breakdown">4039ED56277149BA9F9D37A23A9CDD6E</config_id>
+				<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+				<created_on>2025-03-08T18:20:55</created_on>
+				<generation>1</generation>
+				<id keyed_name="4039ED56277149BA9F9D37A23A9CDD6E" type="sys_System Breakdown">4039ED56277149BA9F9D37A23A9CDD6E</id>
+				<is_current>1</is_current>
+				<is_released>0</is_released>
+				<keyed_name>4039ED56277149BA9F9D37A23A9CDD6E</keyed_name>
+				<major_rev>A</major_rev>
+				<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+				<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+				<modified_on>2025-03-08T18:20:55</modified_on>
+				<new_version>1</new_version>
+				<not_lockable>0</not_lockable>
+				<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+				<related_id keyed_name="SE-00000002 Battery" type="sys_SystemElement">
+					<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="31E2B179BED04EF5A158AAA51D53A040">
+						<classification>Internal System</classification>
+						<config_id keyed_name="SE-00000002 Battery" type="sys_SystemElement">31E2B179BED04EF5A158AAA51D53A040</config_id>
+						<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+						<created_on>2025-03-08T18:20:55</created_on>
+						<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+						<generation>1</generation>
+						<id keyed_name="SE-00000002 Battery" type="sys_SystemElement">31E2B179BED04EF5A158AAA51D53A040</id>
+						<is_current>1</is_current>
+						<is_released>0</is_released>
+						<keyed_name>SE-00000002 Battery</keyed_name>
+						<major_rev>A</major_rev>
+						<make_buy>2</make_buy>
+						<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+						<modified_on>2025-03-08T18:20:55</modified_on>
+						<new_version>1</new_version>
+						<not_lockable>0</not_lockable>
+						<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+						<state>Preliminary</state>
+						<sys_leading_discipline>1</sys_leading_discipline>
+						<item_number>SE-00000002</item_number>
+						<name>Battery</name>
+						<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+					</Item>
+				</related_id>
+				<sort_order>256</sort_order>
+				<source_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+			</Item>
+			<Item action="merge" type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="FF6CE46688C94E78B5B79DDAB0773DB9">
+				<behavior>float</behavior>
+				<config_id keyed_name="FF6CE46688C94E78B5B79DDAB0773DB9" type="sys_System Breakdown">FF6CE46688C94E78B5B79DDAB0773DB9</config_id>
+				<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+				<created_on>2025-03-08T18:20:55</created_on>
+				<generation>1</generation>
+				<id keyed_name="FF6CE46688C94E78B5B79DDAB0773DB9" type="sys_System Breakdown">FF6CE46688C94E78B5B79DDAB0773DB9</id>
+				<is_current>1</is_current>
+				<is_released>0</is_released>
+				<keyed_name>FF6CE46688C94E78B5B79DDAB0773DB9</keyed_name>
+				<major_rev>A</major_rev>
+				<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+				<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+				<modified_on>2025-03-08T18:20:55</modified_on>
+				<new_version>1</new_version>
+				<not_lockable>0</not_lockable>
+				<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+				<related_id keyed_name="SE-00000003 MotorA" type="sys_SystemElement">
+					<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="23C322EA9B724421B2BF86152592026D">
+						<classification>Internal System</classification>
+						<config_id keyed_name="SE-00000003 MotorA" type="sys_SystemElement">23C322EA9B724421B2BF86152592026D</config_id>
+						<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+						<created_on>2025-03-08T18:20:55</created_on>
+						<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+						<generation>1</generation>
+						<id keyed_name="SE-00000003 MotorA" type="sys_SystemElement">23C322EA9B724421B2BF86152592026D</id>
+						<is_current>1</is_current>
+						<is_released>0</is_released>
+						<keyed_name>SE-00000003 MotorA</keyed_name>
+						<major_rev>A</major_rev>
+						<make_buy>2</make_buy>
+						<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+						<modified_on>2025-03-08T18:20:55</modified_on>
+						<new_version>1</new_version>
+						<not_lockable>0</not_lockable>
+						<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+						<state>Preliminary</state>
+						<sys_leading_discipline>2</sys_leading_discipline>
+						<item_number>SE-00000003</item_number>
+						<name>MotorA</name>
+						<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+					</Item>
+				</related_id>
+				<sort_order>384</sort_order>
+				<source_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+			</Item>
+			<Item action="merge" type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="E160B78FD2B3434A89BE6644C73792DD">
+				<behavior>float</behavior>
+				<config_id keyed_name="E160B78FD2B3434A89BE6644C73792DD" type="sys_System Breakdown">E160B78FD2B3434A89BE6644C73792DD</config_id>
+				<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+				<created_on>2025-03-08T18:20:55</created_on>
+				<generation>1</generation>
+				<id keyed_name="E160B78FD2B3434A89BE6644C73792DD" type="sys_System Breakdown">E160B78FD2B3434A89BE6644C73792DD</id>
+				<is_current>1</is_current>
+				<is_released>0</is_released>
+				<keyed_name>E160B78FD2B3434A89BE6644C73792DD</keyed_name>
+				<major_rev>A</major_rev>
+				<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+				<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+				<modified_on>2025-03-08T18:20:55</modified_on>
+				<new_version>1</new_version>
+				<not_lockable>0</not_lockable>
+				<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+				<related_id keyed_name="SE-00000004 MotorB" type="sys_SystemElement">
+					<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="9962D2FC62884CBCA50F51404C4C8939">
+						<classification>Internal System</classification>
+						<config_id keyed_name="SE-00000004 MotorB" type="sys_SystemElement">9962D2FC62884CBCA50F51404C4C8939</config_id>
+						<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+						<created_on>2025-03-08T18:20:55</created_on>
+						<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+						<generation>1</generation>
+						<id keyed_name="SE-00000004 MotorB" type="sys_SystemElement">9962D2FC62884CBCA50F51404C4C8939</id>
+						<is_current>1</is_current>
+						<is_released>0</is_released>
+						<keyed_name>SE-00000004 MotorB</keyed_name>
+						<major_rev>A</major_rev>
+						<make_buy>2</make_buy>
+						<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+						<modified_on>2025-03-08T18:20:55</modified_on>
+						<new_version>1</new_version>
+						<not_lockable>0</not_lockable>
+						<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+						<state>Preliminary</state>
+						<sys_leading_discipline>2</sys_leading_discipline>
+						<item_number>SE-00000004</item_number>
+						<name>MotorB</name>
+						<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+					</Item>
+				</related_id>
+				<sort_order>512</sort_order>
+				<source_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+			</Item>
+			<Item action="merge" type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="CD38F0368F034C908FE5CBA5FFEDB933">
+				<behavior>float</behavior>
+				<config_id keyed_name="CD38F0368F034C908FE5CBA5FFEDB933" type="sys_System Breakdown">CD38F0368F034C908FE5CBA5FFEDB933</config_id>
+				<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+				<created_on>2025-03-08T18:20:56</created_on>
+				<generation>1</generation>
+				<id keyed_name="CD38F0368F034C908FE5CBA5FFEDB933" type="sys_System Breakdown">CD38F0368F034C908FE5CBA5FFEDB933</id>
+				<is_current>1</is_current>
+				<is_released>0</is_released>
+				<keyed_name>CD38F0368F034C908FE5CBA5FFEDB933</keyed_name>
+				<major_rev>A</major_rev>
+				<managed_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</managed_by_id>
+				<modified_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</modified_by_id>
+				<modified_on>2025-03-08T18:20:56</modified_on>
+				<new_version>1</new_version>
+				<not_lockable>0</not_lockable>
+				<permission_id keyed_name="Preliminary sys_System" type="Permission">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+				<related_id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">
+					<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="FB98EFC11EC6447489C34BD8B336C4D2">
+						<classification>Internal System</classification>
+						<config_id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</config_id>
+						<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+						<created_on>2025-03-08T18:20:56</created_on>
+						<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+						<generation>1</generation>
+						<id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</id>
+						<is_current>1</is_current>
+						<is_released>0</is_released>
+						<keyed_name>SE-00000006 Microbit</keyed_name>
+						<major_rev>A</major_rev>
+						<make_buy>2</make_buy>
+						<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+						<modified_on>2025-03-10T19:06:04</modified_on>
+						<new_version>1</new_version>
+						<not_lockable>0</not_lockable>
+						<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+						<state>Preliminary</state>
+						<sys_leading_discipline>3</sys_leading_discipline>
+						<item_number>SE-00000006</item_number>
+						<name>Microbit</name>
+						<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+						<Relationships>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="D35610C6CB854CD883BD38CEA9938DFA">
+								<id keyed_name="D35610C6CB854CD883BD38CEA9938DFA" type="sys_SystemElement Structure">D35610C6CB854CD883BD38CEA9938DFA</id>
+								<related_id keyed_name="SE-00000008 Microbit code" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="1778C06E06974D3AA5E9DC3CEC2C4D67">
+										<classification>Internal System</classification>
+										<config_id keyed_name="SE-00000008 Microbit code" type="sys_SystemElement">1778C06E06974D3AA5E9DC3CEC2C4D67</config_id>
+										<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+										<created_on>2025-03-08T18:26:28</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<description>MicroPython language</description>
+										<generation>1</generation>
+										<id keyed_name="SE-00000008 Microbit code" type="sys_SystemElement">1778C06E06974D3AA5E9DC3CEC2C4D67</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000008 Microbit code</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>1</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T18:18:38</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>4</sys_leading_discipline>
+										<item_number>SE-00000008</item_number>
+										<name>Microbit code</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</source_id>
+							</Item>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="4ECCF1D476094CD698B29608D9D688C2">
+								<id keyed_name="4ECCF1D476094CD698B29608D9D688C2" type="sys_SystemElement Structure">4ECCF1D476094CD698B29608D9D688C2</id>
+								<related_id keyed_name="SE-00000007 Gyroscope" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="0A87AFE2BD9F4935B3F8D2789ED5ADB5">
+										<classification>Internal System</classification>
+										<config_id keyed_name="SE-00000007 Gyroscope" type="sys_SystemElement">0A87AFE2BD9F4935B3F8D2789ED5ADB5</config_id>
+										<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+										<created_on>2025-03-08T18:20:56</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<generation>1</generation>
+										<id keyed_name="SE-00000007 Gyroscope" type="sys_SystemElement">0A87AFE2BD9F4935B3F8D2789ED5ADB5</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000007 Gyroscope</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>2</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T18:22:38</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>3</sys_leading_discipline>
+										<item_number>SE-00000007</item_number>
+										<name>Gyroscope</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</source_id>
+							</Item>
+							<Item action="merge" type="sys_SystemElement Structure" typeId="31CEBB1FCC4F4C76A9E803CEFECD1EA1" id="6D3BEB9D47704AA5950763558A9757A1">
+								<id keyed_name="6D3BEB9D47704AA5950763558A9757A1" type="sys_SystemElement Structure">6D3BEB9D47704AA5950763558A9757A1</id>
+								<related_id keyed_name="SE-00000005 MotorController" type="sys_SystemElement">
+									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="A5A4074334274E9AA697B71297966A82">
+										<classification>Internal System</classification>
+										<config_id keyed_name="SE-00000005 MotorController" type="sys_SystemElement">A5A4074334274E9AA697B71297966A82</config_id>
+										<created_by_id keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</created_by_id>
+										<created_on>2025-03-08T18:20:55</created_on>
+										<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+										<description>Micro:Bit Motor Driver
+Supplied by SB Components sb-components.co.uk
+Drives 2 motors, 3 Servos
+and other devices via iC2 interface</description>
+										<generation>1</generation>
+										<id keyed_name="SE-00000005 MotorController" type="sys_SystemElement">A5A4074334274E9AA697B71297966A82</id>
+										<is_current>1</is_current>
+										<is_released>0</is_released>
+										<keyed_name>SE-00000005 MotorController</keyed_name>
+										<major_rev>A</major_rev>
+										<make_buy>2</make_buy>
+										<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+										<modified_on>2025-03-10T18:20:49</modified_on>
+										<new_version>1</new_version>
+										<not_lockable>0</not_lockable>
+										<owned_by_id keyed_name="Jon Hodge" type="Identity">B8727687965146E6A36B4C097688DC04</owned_by_id>
+										<permission_id keyed_name="Preliminary sys_SystemElement" type="Permission">C72BE0C931774E4AA54156CA74E9EA7B</permission_id>
+										<state>Preliminary</state>
+										<sys_leading_discipline>3</sys_leading_discipline>
+										<item_number>SE-00000005</item_number>
+										<name>MotorController</name>
+										<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+									</Item>
+								</related_id>
+								<source_id keyed_name="SE-00000006 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</source_id>
+							</Item>
+						</Relationships>
+					</Item>
+				</related_id>
+				<sort_order>768</sort_order>
+				<source_id keyed_name="SYS-000001 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+			</Item>
+		</Relationships>
+	</Item>
+</AML>

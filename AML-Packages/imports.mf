@@ -3,7 +3,8 @@
 	<package name="SDTools" path="SDTools\Import"/>
 	<package name="SEH4" path="SEH4\Import">
     	<dependson name="com.aras.innovator.solution.PLM" />
-		<dependson name="com.aras.innovator.solution.SA" />	
  	</package>
-	<package name="com.aras.innovator.solution.SA" path="SA\Import" />
+	<package name="com.aras.innovator.solution.SA" path="SA\Import">
+			<dependson name="SEH4" />	
+	</package>
 </imports>

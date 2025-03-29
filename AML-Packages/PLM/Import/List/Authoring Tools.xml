@@ -50,7 +50,7 @@
     <label xml:lang="en">VS Code</label>
     <sort_order>700</sort_order>
     <source_id keyed_name="Authoring Tools" type="List">11A953CA5A5E4BCD8EC9758C7E4B6E92</source_id>
-    <value>VS Cide</value>
+    <value>VS Code</value>
    </Item>
    <Item type="Value" id="E07B6FFA254745CAB132822CF65A67DA" action="add">
     <inactive>1</inactive>

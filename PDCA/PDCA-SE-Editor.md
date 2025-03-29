@@ -25,15 +25,31 @@ PDCA SE-Editor
         - add attribute in client method, call to server for each node (selected)
     - get type and id
     - invoke IOM
+- Add menu items 1.3
+    - use top.aras, IOM and open window
+- Menu Item New Process 1.4
+    - use ModalDialog example
+        - Open modal dialog
+        - Select process and copy
+        - template = 0, new name, add system/element, owner and save
+        - refresh graph
+        
+    
 
 ## DO
 - se_editor js and css files show context menu 1.1
 - explore menu option context in debugger
     - top.aras is the aras object with IomInnovator and ItemsCache properties
 - menu options set in client method 1.2
+- menu option Open working 1.3
+- menu options Add Process and Add Input working 1.4
+
+
+
 
 ## CHECK
 - 1.1 test successful, context menu shows and executes code on select item
     - click out of node -> default context menu
     - error message on close "The method 'cui_svicm_reports_click' failed"
 - 1.2 menu options working, type and id attr in svg,  error message on close resolved
+- 1.4 menu working, Add Input does not reproduce osd behavior, use custom sub-menu

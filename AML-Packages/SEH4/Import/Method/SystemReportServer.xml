@@ -40,9 +40,10 @@ string aml2 = @"<AML>
     <Item type='SE Process' action='get' select='item_number,name'>
         <system_id condition='in'>{id_list}</system_id>
         <Relationships>
-            <Item type='SE Input'  action ='get' select='is_applicable, se_input_id,  se_controlled_item_id(keyed_name,name)'  />
-            <Item type='SE Output' action ='get' select='is_applicable, se_output_id, se_controlled_item_id(keyed_name,name)'  />
-         
+            <Item type='SE Input'  action ='get' select='is_applicable, se_io_id,  se_controlled_item_id(keyed_name,name)' >            
+            </Item>
+            <Item type='SE Output' action ='get' select='is_applicable, se_io_id, se_controlled_item_id(keyed_name,name)' >
+            </Item>
         </Relationships>
     </Item>
 </AML>";
@@ -69,7 +70,7 @@ Item io_nodes = res2.getItemsByXPath("//Item[@type='SE Input']|//Item[@type='SE 
 for (int i = 0; i < io_nodes.getItemCount(); i++)
 {
     Item this_io = io_nodes.getItemByIndex(i);
-    string keyed_name = this_io.getPropertyAttribute("id","keyed_name");
+    string keyed_name = this_io.getPropertyAttribute("se_io_id","keyed_name");
     keyed_name = keyed_name.Replace(" ","\r\n");
     string se_controlled_item_id;
     Item se_controlled_item = this_io.getPropertyItem("se_controlled_item_id"); // null if no Item present
@@ -117,7 +118,7 @@ dot_string = dot_string.Replace("&gt;",">"); // decode right angle bracket
 
 // step 4 return svg for thread diagram
 string body = "<body><dot>" + dot_string +  "</dot></body>";
-return innov.applyMethod("Dot2Svg",body); 
+return innov.applyMethod("Dot2Svg",body);
 ]]></method_code>
   <method_type>C#</method_type>
   <name>SystemReportServer</name>

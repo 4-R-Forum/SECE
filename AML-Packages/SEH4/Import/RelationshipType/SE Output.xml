@@ -35,7 +35,7 @@
       <column_width>400</column_width>
       <data_source>
        <Item type="Property" action="get" select="id">
-        <name>se_output_id</name>
+        <name>se_io_id</name>
         <source_id>84C8F4415BF147A89359BFEB9F58ADB7</source_id>
        </Item>
       </data_source>
@@ -118,13 +118,13 @@
       <is_multi_valued>0</is_multi_valued>
       <is_required>0</is_required>
       <item_behavior>float</item_behavior>
-      <label xml:lang="en">se_output_id</label>
+      <label xml:lang="en">se_io_id</label>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
       <sort_order>3584</sort_order>
       <source_id keyed_name="SE Output" type="ItemType" name="SE Output">84C8F4415BF147A89359BFEB9F58ADB7</source_id>
       <track_history>0</track_history>
-      <name>se_output_id</name>
+      <name>se_io_id</name>
      </Item>
      <Item type="Server Event" id="D6E10ADB8FA04D26850E6936B0F72802" action="add">
       <event_version>version_1</event_version>

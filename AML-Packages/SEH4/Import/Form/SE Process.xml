@@ -257,6 +257,29 @@
       <y>80</y>
       <name>system_or_element</name>
      </Item>
+     <Item type="Field" id="FA37476F3FCB4AE0893B96BD1A9D2B2B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">template_id</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="template_id" type="Property">08707DF492A94C30B39CC90F85D9621D</propertytype_id>
+      <show_help>1</show_help>
+      <sort_order>1536</sort_order>
+      <source_id keyed_name="92704EB6A9824DC899B093F4C7560F2C" type="Body">92704EB6A9824DC899B093F4C7560F2C</source_id>
+      <tab_index>4096</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>559</x>
+      <y>12</y>
+      <name>template_id</name>
+     </Item>
     </Relationships>
    </Item>
   </Relationships>

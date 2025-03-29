@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileType" id="B59684E0D5C44E369D81F89980BBBE08" action="add">
+  <extension>.md</extension>
+  <mimetype>text/markdown</mimetype>
+  <use_magic_bytes>0</use_magic_bytes>
+  <use_regular_expression>0</use_regular_expression>
+  <name>Markdown</name>
+ </Item>
+</AML>

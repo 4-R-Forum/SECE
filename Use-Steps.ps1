@@ -22,7 +22,8 @@ switch ($step) {
             $resp = Read-Host
             if ($resp.ToUpper() -ne 'Y') { Exit }
             Connect-Innov 'root'
-            Restore-Database
+            # Restore-Database
+            Import-Packages
     }
     2   {
             # uses sql sa login

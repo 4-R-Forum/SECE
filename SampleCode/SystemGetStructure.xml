@@ -1,0 +1,16 @@
+ <AML>
+   <Item type='sys_System' action='get'  id='C27D19AFCC2D470BB4F216C8B459D955' >
+        <Relationships>
+            <Item type='sys_System Breakdown' action='get'  >
+               <related_id>
+                  <Item type='sys_SystemElement' action='get'>
+                 <Relationships>
+                       <Item type='sys_SystemElement Structure' action='get' select='related_id' />
+                </Relationships>                     
+                  </Item>
+               </related_id>
+
+            </Item>
+        </Relationships>
+    </Item>
+</AML>
