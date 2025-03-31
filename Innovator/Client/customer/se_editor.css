@@ -21,6 +21,41 @@ svg {
 .context-menu ul li:hover {
     background: lightgray;
 }
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    list-style-type: none;
+    min-width: 150px; /* Set minimum width */
+    max-width: 300px; /* Set maximum width */
+    height: auto; /* Adjust height based on content */
+    max-height: 200px; /* Limit height, overflow scroll if needed */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Show submenu on hover */
+li:hover > .sub-menu {
+    display: block;
+}
+
+/* Optional: Style individual submenu items */
+.sub-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Optional: Highlight submenu items on hover */
+.sub-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
 svg {
     pointer-events: none; /* Prevents the outer svg <svg> from blocking events */
 }

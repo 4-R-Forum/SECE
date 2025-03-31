@@ -32,20 +32,16 @@ PDCA SE-Editor
         - Open modal dialog
         - Select process and copy
         - template = 0, new name, add system/element, owner and save
-        - refresh graph
-        
-    
+        - refresh graph    
 
 ## DO
-- se_editor js and css files show context menu 1.1
+- 1.1 se_editor js and css files show context menu
 - explore menu option context in debugger
     - top.aras is the aras object with IomInnovator and ItemsCache properties
-- menu options set in client method 1.2
-- menu option Open working 1.3
-- menu options Add Process and Add Input working 1.4
-
-
-
+- 1.2 menu options set in client method
+- 1.3 menu option Open working
+- 1.4 menu options Add Process and Add Input working
+- 1.5 Add Input with sub-menu
 
 ## CHECK
 - 1.1 test successful, context menu shows and executes code on select item
@@ -53,3 +49,10 @@ PDCA SE-Editor
     - error message on close "The method 'cui_svicm_reports_click' failed"
 - 1.2 menu options working, type and id attr in svg,  error message on close resolved
 - 1.4 menu working, Add Input does not reproduce osd behavior, use custom sub-menu
+- 1.5 Add Input with sub-menu working 
+
+## ACT
+- Show SE Editor from html page in Client/customer
+    - consider sidebar for System ItemType
+- add all menu items
+- refresh button
