@@ -1,0 +1,17 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="345D8A82EB5243B38D58F44EA2067C59" action="add">
+  <classification>Data Model</classification>
+  <label xml:lang="en">SE Editor</label>
+  <location keyed_name="ItemWindowSidebar" type="cui_Location">BC1CFDCECA434111B7A88A51EE430CC5</location>
+  <name>SE_Editor</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="D1F6C674C5E944B697CED22ADB25C5FD" action="add">
+    <action>Add</action>
+    <related_id keyed_name="Open_SE_Editor" type="CommandBarItem">F9784991367D4AE4B3A9C63EDD88BCA4</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="SE_Editor" type="CommandBarSection">345D8A82EB5243B38D58F44EA2067C59</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

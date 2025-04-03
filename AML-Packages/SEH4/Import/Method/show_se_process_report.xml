@@ -2,12 +2,12 @@
  <Item type="Method" id="A21BDBA04B534B92B3F3B061497617B2" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
   <method_code><![CDATA[
-var svgString  = this.apply("SystemReportServer").getResult();
+var svgString  = thisItem.apply("SystemReportServer").getResult();
 // Parse the string into a DOM structure
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(svgString, "image/svg+xml");
-const this_type = this.getType();
-const this_id = this.getID();
+const this_type = thisItem.getType();
+const this_id = thisItem.getID();
 
 // Select all elements with the "node" attribute
 xmlDoc.querySelectorAll(".graph").forEach(el => {
@@ -22,7 +22,7 @@ xmlDoc.querySelectorAll(".node").forEach(el => {
 		let this_xid = el.childNodes[0];
 		let this_id = this_xid.textContent.replace("x","");
 		let this_type = "SE Controlled Item";
-		let seci = this.newItem("SE Controlled Item");
+		let seci = thisItem.newItem("SE Controlled Item");
 		seci.setID(this_id);
 		seci.setAttribute("select","id");
 		let res = seci.apply("get");
@@ -43,17 +43,17 @@ const newSvgString = serializer.serializeToString(xmlDoc);
 var html = `
 <html>
 	<head>
-	<link rel="stylesheet" href="../Client/customer/se_editor.css">	
-    <script src='../Client/customer/panzoom.js'   type='text/javascript' ></script>
-    <script src='../Client/customer/se_editor3.js' type='text/javascript'></script>
+	<link rel="stylesheet" href="../Client/customer/se_editor.css" type='text/javascript'>	
+    <script src='http://localhost/SECE/Client/customer/panzoom.js'   type='text/javascript' ></script>
+    <script src='http://localhost/SECE/Client/customer/se_editor4.js' type='text/javascript'></script>
  	</head>
     <body>
 	    <script type='text/javascript'>
 	        setTimeout(init,400);
 	        function init(){
-	          var area = document.getElementById('graph0');
-		        panzoom(area, {autocenter: true, bounds: true});
-						init_contextMenu();
+	        var area = document.getElementById('graph0');
+		      panzoom(area, {autocenter: true, bounds: true});
+					init_contextMenu();
 		    }
 	    </script>
 	    <div>
@@ -67,12 +67,46 @@ html += `
 	</body>
 </html>
 `;
+let iframe = document.getElementById("se_editor");
+if (iframe) {
+    iframe.remove(); // Remove existing iframe before adding a new one
+};
+iframe = document.createElement("iframe");
+iframe.style.border = "1px solid black";
+iframe.style.visibility = "visible";
+iframe.id = "se_editor";
 
-var options ="status=no,toolbar=no,menubar=no,titlebar=yes,resizable=yes,scrollbars=yes";
-//var myWindow = window.open("", "System Report", options);
-//myWindow.document.write(html);
-//return true;
-return html;
+let se_viewers = document.getElementById("viewers");
+// Use MutationObserver to watch for attribute changes
+let observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === "active-pane-id") {
+            let activePane = se_viewers.getAttribute("active-pane-id");
+            console.log("Active pane changed:", activePane);
+            
+            if (activePane === "Open_SE_Editor") {
+                iframe.style.visibility = "visible";
+            } else {
+                iframe.style.visibility = "hidden";
+            }
+        }
+    });
+});
+// Observe the "viewers" element for attribute changes
+observer.observe(se_viewers, { attributes: true });
+
+// Wait for iframe to load, then write content
+iframe.onload = function() {
+    let doc = iframe.contentWindow.document;
+    doc.open();
+    doc.write(html);  // Writes the HTML content
+    doc.close();
+};
+let viewers = document.getElementById("viewers");
+viewers.appendChild(iframe);
+
+return null;
+
 ]]></method_code>
   <method_type>JavaScript</method_type>
   <name>show_se_process_report</name>

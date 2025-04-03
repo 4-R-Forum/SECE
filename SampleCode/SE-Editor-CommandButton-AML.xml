@@ -1,0 +1,250 @@
+<Item type="sys_System" typeId="265E74E0B4AC4D898D75BB6F1D86C621" id="C27D19AFCC2D470BB4F216C8B459D955" levels="0">
+	<config_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</config_id>
+	<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+	<created_on>2025-03-26T18:15:16</created_on>
+	<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">85252265ADC94EA0BD2586DC7A27952C</current_state>
+	<generation>1</generation>
+	<id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</id>
+	<is_current>1</is_current>
+	<is_released>0</is_released>
+	<keyed_name>SYS-000002 LegoBot</keyed_name>
+	<major_rev>A</major_rev>
+	<managed_by_id>B8727687965146E6A36B4C097688DC04</managed_by_id>
+	<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+	<modified_on>2025-03-26T18:15:17</modified_on>
+	<new_version>1</new_version>
+	<not_lockable>0</not_lockable>
+	<permission_id keyed_name="Preliminary sys_System" type="Permission" origPermission="B1DD6856316C4FA1BE31DAC4D38CAA1D">B1DD6856316C4FA1BE31DAC4D38CAA1D</permission_id>
+	<state>Preliminary</state>
+	<item_number>SYS-000002</item_number>
+	<name>LegoBot</name>
+	<itemtype>265E74E0B4AC4D898D75BB6F1D86C621</itemtype>
+	<authoring_tool is_null="1"/>
+	<authoring_tool_version is_null="1"/>
+	<classification is_null="1"/>
+	<css is_null="1"/>
+	<description is_null="1"/>
+	<effective_date is_null="1"/>
+	<external_id is_null="1"/>
+	<external_owner is_null="1"/>
+	<external_type is_null="1"/>
+	<locked_by_id is_null="1"/>
+	<minor_rev is_null="1"/>
+	<owned_by_id is_null="1"/>
+	<release_date is_null="1"/>
+	<superseded_date is_null="1"/>
+	<team_id is_null="1"/>
+	<thumbnail is_null="1"/>
+	<Relationships>
+		<Item type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="E73F7F29C3F2449D8AE451D4ABF55CC3">
+			<classification is_null="1"/>
+			<config_id keyed_name="E73F7F29C3F2449D8AE451D4ABF55CC3" type="sys_System Breakdown">E73F7F29C3F2449D8AE451D4ABF55CC3</config_id>
+			<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+			<created_on>2025-03-26T18:15:16</created_on>
+			<css is_null="1"/>
+			<current_state is_null="1"/>
+			<id keyed_name="E73F7F29C3F2449D8AE451D4ABF55CC3" type="sys_System Breakdown">E73F7F29C3F2449D8AE451D4ABF55CC3</id>
+			<keyed_name>E73F7F29C3F2449D8AE451D4ABF55CC3</keyed_name>
+			<locked_by_id is_null="1"/>
+			<major_rev>A</major_rev>
+			<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+			<modified_on>2025-03-26T18:15:16</modified_on>
+			<related_id keyed_name="SE-00000002 Frame" type="sys_SystemElement">
+				<Item type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="DD0F653C556E481AAD410D21193FD1AE">
+					<classification>Internal System</classification>
+					<config_id keyed_name="SE-00000002 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</config_id>
+					<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+					<created_on>2025-03-26T18:15:16</created_on>
+					<css is_null="1"/>
+					<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+					<description>Built using standard Lego plus custom parts listed in Structure</description>
+					<effective_date is_null="1"/>
+					<generation>1</generation>
+					<id keyed_name="SE-00000002 Frame" type="sys_SystemElement">DD0F653C556E481AAD410D21193FD1AE</id>
+					<is_current>1</is_current>
+					<keyed_name>SE-00000002 Frame</keyed_name>
+					<locked_by_id is_null="1"/>
+					<major_rev>A</major_rev>
+					<make_buy>1</make_buy>
+					<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+					<modified_on>2025-03-26T18:15:16</modified_on>
+					<new_version>1</new_version>
+					<release_date is_null="1"/>
+					<sys_leading_discipline>1</sys_leading_discipline>
+					<item_number>SE-00000002</item_number>
+					<name>Frame</name>
+					<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+				</Item>
+			</related_id>
+			<source_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+		</Item>
+		<Item type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="4039ED56277149BA9F9D37A23A9CDD6E">
+			<classification is_null="1"/>
+			<config_id keyed_name="4039ED56277149BA9F9D37A23A9CDD6E" type="sys_System Breakdown">4039ED56277149BA9F9D37A23A9CDD6E</config_id>
+			<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+			<created_on>2025-03-26T18:15:17</created_on>
+			<css is_null="1"/>
+			<current_state is_null="1"/>
+			<id keyed_name="4039ED56277149BA9F9D37A23A9CDD6E" type="sys_System Breakdown">4039ED56277149BA9F9D37A23A9CDD6E</id>
+			<keyed_name>4039ED56277149BA9F9D37A23A9CDD6E</keyed_name>
+			<locked_by_id is_null="1"/>
+			<major_rev>A</major_rev>
+			<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+			<modified_on>2025-03-26T18:15:17</modified_on>
+			<related_id keyed_name="SE-00000006 Battery" type="sys_SystemElement">
+				<Item type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="31E2B179BED04EF5A158AAA51D53A040">
+					<classification>Internal System</classification>
+					<config_id keyed_name="SE-00000006 Battery" type="sys_SystemElement">31E2B179BED04EF5A158AAA51D53A040</config_id>
+					<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+					<created_on>2025-03-26T18:15:17</created_on>
+					<css is_null="1"/>
+					<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+					<description is_null="1"/>
+					<effective_date is_null="1"/>
+					<generation>1</generation>
+					<id keyed_name="SE-00000006 Battery" type="sys_SystemElement">31E2B179BED04EF5A158AAA51D53A040</id>
+					<is_current>1</is_current>
+					<keyed_name>SE-00000006 Battery</keyed_name>
+					<locked_by_id is_null="1"/>
+					<major_rev>A</major_rev>
+					<make_buy>2</make_buy>
+					<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+					<modified_on>2025-03-26T18:15:17</modified_on>
+					<new_version>1</new_version>
+					<release_date is_null="1"/>
+					<sys_leading_discipline>1</sys_leading_discipline>
+					<item_number>SE-00000006</item_number>
+					<name>Battery</name>
+					<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+				</Item>
+			</related_id>
+			<source_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+		</Item>
+		<Item type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="FF6CE46688C94E78B5B79DDAB0773DB9">
+			<classification is_null="1"/>
+			<config_id keyed_name="FF6CE46688C94E78B5B79DDAB0773DB9" type="sys_System Breakdown">FF6CE46688C94E78B5B79DDAB0773DB9</config_id>
+			<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+			<created_on>2025-03-26T18:15:17</created_on>
+			<css is_null="1"/>
+			<current_state is_null="1"/>
+			<id keyed_name="FF6CE46688C94E78B5B79DDAB0773DB9" type="sys_System Breakdown">FF6CE46688C94E78B5B79DDAB0773DB9</id>
+			<keyed_name>FF6CE46688C94E78B5B79DDAB0773DB9</keyed_name>
+			<locked_by_id is_null="1"/>
+			<major_rev>A</major_rev>
+			<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+			<modified_on>2025-03-26T18:15:17</modified_on>
+			<related_id keyed_name="SE-00000007 MotorA" type="sys_SystemElement">
+				<Item type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="23C322EA9B724421B2BF86152592026D">
+					<classification>Internal System</classification>
+					<config_id keyed_name="SE-00000007 MotorA" type="sys_SystemElement">23C322EA9B724421B2BF86152592026D</config_id>
+					<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+					<created_on>2025-03-26T18:15:17</created_on>
+					<css is_null="1"/>
+					<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+					<description is_null="1"/>
+					<effective_date is_null="1"/>
+					<generation>1</generation>
+					<id keyed_name="SE-00000007 MotorA" type="sys_SystemElement">23C322EA9B724421B2BF86152592026D</id>
+					<is_current>1</is_current>
+					<keyed_name>SE-00000007 MotorA</keyed_name>
+					<locked_by_id is_null="1"/>
+					<major_rev>A</major_rev>
+					<make_buy>2</make_buy>
+					<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+					<modified_on>2025-03-26T18:15:17</modified_on>
+					<new_version>1</new_version>
+					<release_date is_null="1"/>
+					<sys_leading_discipline>2</sys_leading_discipline>
+					<item_number>SE-00000007</item_number>
+					<name>MotorA</name>
+					<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+				</Item>
+			</related_id>
+			<source_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+		</Item>
+		<Item type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="E160B78FD2B3434A89BE6644C73792DD">
+			<classification is_null="1"/>
+			<config_id keyed_name="E160B78FD2B3434A89BE6644C73792DD" type="sys_System Breakdown">E160B78FD2B3434A89BE6644C73792DD</config_id>
+			<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+			<created_on>2025-03-26T18:15:17</created_on>
+			<css is_null="1"/>
+			<current_state is_null="1"/>
+			<id keyed_name="E160B78FD2B3434A89BE6644C73792DD" type="sys_System Breakdown">E160B78FD2B3434A89BE6644C73792DD</id>
+			<keyed_name>E160B78FD2B3434A89BE6644C73792DD</keyed_name>
+			<locked_by_id is_null="1"/>
+			<major_rev>A</major_rev>
+			<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+			<modified_on>2025-03-26T18:15:17</modified_on>
+			<related_id keyed_name="SE-00000008 MotorB" type="sys_SystemElement">
+				<Item type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="9962D2FC62884CBCA50F51404C4C8939">
+					<classification>Internal System</classification>
+					<config_id keyed_name="SE-00000008 MotorB" type="sys_SystemElement">9962D2FC62884CBCA50F51404C4C8939</config_id>
+					<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+					<created_on>2025-03-26T18:15:17</created_on>
+					<css is_null="1"/>
+					<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+					<description is_null="1"/>
+					<effective_date is_null="1"/>
+					<generation>1</generation>
+					<id keyed_name="SE-00000008 MotorB" type="sys_SystemElement">9962D2FC62884CBCA50F51404C4C8939</id>
+					<is_current>1</is_current>
+					<keyed_name>SE-00000008 MotorB</keyed_name>
+					<locked_by_id is_null="1"/>
+					<major_rev>A</major_rev>
+					<make_buy>2</make_buy>
+					<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+					<modified_on>2025-03-26T18:15:17</modified_on>
+					<new_version>1</new_version>
+					<release_date is_null="1"/>
+					<sys_leading_discipline>2</sys_leading_discipline>
+					<item_number>SE-00000008</item_number>
+					<name>MotorB</name>
+					<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+				</Item>
+			</related_id>
+			<source_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+		</Item>
+		<Item type="sys_System Breakdown" typeId="9883859DA8164DF6A7FE76891BF65D68" id="CD38F0368F034C908FE5CBA5FFEDB933">
+			<classification is_null="1"/>
+			<config_id keyed_name="CD38F0368F034C908FE5CBA5FFEDB933" type="sys_System Breakdown">CD38F0368F034C908FE5CBA5FFEDB933</config_id>
+			<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+			<created_on>2025-03-26T18:15:17</created_on>
+			<css is_null="1"/>
+			<current_state is_null="1"/>
+			<id keyed_name="CD38F0368F034C908FE5CBA5FFEDB933" type="sys_System Breakdown">CD38F0368F034C908FE5CBA5FFEDB933</id>
+			<keyed_name>CD38F0368F034C908FE5CBA5FFEDB933</keyed_name>
+			<locked_by_id is_null="1"/>
+			<major_rev>A</major_rev>
+			<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+			<modified_on>2025-03-26T18:15:17</modified_on>
+			<related_id keyed_name="SE-00000009 Microbit" type="sys_SystemElement">
+				<Item type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="FB98EFC11EC6447489C34BD8B336C4D2">
+					<classification>Internal System</classification>
+					<config_id keyed_name="SE-00000009 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</config_id>
+					<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
+					<created_on>2025-03-26T18:15:17</created_on>
+					<css is_null="1"/>
+					<current_state name="Preliminary" keyed_name="Preliminary" type="Life Cycle State">BF350D831434412B8FFEE1E52FE80DEC</current_state>
+					<description is_null="1"/>
+					<effective_date is_null="1"/>
+					<generation>1</generation>
+					<id keyed_name="SE-00000009 Microbit" type="sys_SystemElement">FB98EFC11EC6447489C34BD8B336C4D2</id>
+					<is_current>1</is_current>
+					<keyed_name>SE-00000009 Microbit</keyed_name>
+					<locked_by_id is_null="1"/>
+					<major_rev>A</major_rev>
+					<make_buy>2</make_buy>
+					<modified_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</modified_by_id>
+					<modified_on>2025-03-26T18:15:17</modified_on>
+					<new_version>1</new_version>
+					<release_date is_null="1"/>
+					<sys_leading_discipline>3</sys_leading_discipline>
+					<item_number>SE-00000009</item_number>
+					<name>Microbit</name>
+					<itemtype>F09A89AEF0F74FA8BD5ED2F822C0E9A7</itemtype>
+				</Item>
+			</related_id>
+			<source_id keyed_name="SYS-000002 LegoBot" type="sys_System">C27D19AFCC2D470BB4F216C8B459D955</source_id>
+		</Item>
+	</Relationships>
+</Item>
