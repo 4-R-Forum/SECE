@@ -1,0 +1,78 @@
+﻿<AML>
+ <Item type="Method" id="5DF482762EA54752B916C15095DBD3BD" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[var svgString  = this.apply("SystemReportServer").getResult();
+// Parse the string into a DOM structure
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(svgString, "image/svg+xml");
+const this_type = this.getType();
+const this_id = this.getID();
+
+// Select all elements with the "node" attribute
+xmlDoc.querySelectorAll(".graph").forEach(el => {
+		el.setAttribute("data-options", "[\"Open Systen\", \"Close Report\"]");	
+		el.setAttribute("this_type",this_type);
+		el.setAttribute("this_id",this_id);
+});
+
+// Select all elements with the "node" attribute
+xmlDoc.querySelectorAll(".node").forEach(el => {
+		// set attributes for se_editor, type, id, options for menu
+		let this_xid = el.childNodes[0];
+		let this_id = this_xid.textContent.replace("x","");
+		let this_type = "SE Controlled Item";
+		let seci = this.newItem("SE Controlled Item");
+		seci.setID(this_id);
+		seci.setAttribute("select","id");
+		let res = seci.apply("get");
+		if (res.isError()) {
+			this_type = "SE Process";
+			el.setAttribute("data-options", "[\"Open\", \"Add Input\",\"Add Output\",  \"New Process\"]");			 
+		} 
+		else {
+			el.setAttribute("data-options", "[\"Open\", \"New  Input/Output\"]");
+		};
+		el.setAttribute("this_type",this_type);
+		el.setAttribute("this_id",this_id);
+});
+
+// Serialize it back to string
+const serializer = new XMLSerializer();
+const newSvgString = serializer.serializeToString(xmlDoc);
+var html = `
+<html>
+	<head>
+	<link rel="stylesheet" href="../Client/customer/se_editor.css">	
+    <script src='../Client/customer/panzoom.js'   type='text/javascript' ></script>
+    <script src='../Client/customer/se_editor3.1.js' type='text/javascript'></script>
+ 	</head>
+    <body>
+	    <script type='text/javascript'>
+	        setTimeout(init,400);
+	        function init(){
+	          var area = document.getElementById('graph0');
+		        panzoom(area, {autocenter: true, bounds: true});
+						init_contextMenu();
+		    }
+	    </script>
+	    <div>
+            <div id="contextMenu" class="context-menu">
+        <ul id="menuItems"></ul>
+    </div>
+`;
+html +=  newSvgString;
+html += `
+		</div>
+	</body>
+</html>
+`;
+
+var options ="status=no,toolbar=no,menubar=no,titlebar=yes,resizable=yes,scrollbars=yes";
+//var myWindow = window.open("", "System Report", options);
+//myWindow.document.write(html);
+//return true;
+return html;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>show_se_process_report3</name>
+ </Item>
+</AML>
