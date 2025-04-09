@@ -572,11 +572,13 @@
     <sort_order>640</sort_order>
     <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
    </Item>
+   <!--
    <Item type="FormComposite" id="87216696B3FA4EDF8D7A88D82D1664DE" action="add">
     <related_id keyed_name="Document" type="cui_WindowSection">4871A7EF34F745D4842852ADEDBC08BB</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
    </Item>
+   -->
   </Relationships>
  </Item>
  <Item type="Field" id="3D64D3F95A264F5C87DC86220CB20981" action="edit">

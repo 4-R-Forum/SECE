@@ -1,7 +1,8 @@
 ﻿<AML>
  <Item type="Method" id="5FB31395E0C046F8BF473BEDE6BDC585" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
-  <method_code><![CDATA[debugger;
+  <method_code><![CDATA[
+// debugger;
 const is_report = false;
 
 svgString = thisItem.apply("SystemReportServer").getResult();
@@ -13,7 +14,7 @@ const this_id = thisItem.getID();
 
 // Select all elements with the "node" attribute
 xmlDoc.querySelectorAll(".graph").forEach(el => {
-	el.setAttribute("data-options", "[\"Open Systen\", \"Close Report\"]");
+	el.setAttribute("data-options", "[\"Open Systen\", \"Refresh Report\"]");
 	el.setAttribute("this_type", this_type);
 	el.setAttribute("this_id", this_id);
 });
@@ -33,7 +34,7 @@ xmlDoc.querySelectorAll(".node").forEach(el => {
 		el.setAttribute("data-options", "[\"Open\", \"Add Input\",\"Add Output\",  \"New Process\"]");
 	}
 	else {
-		el.setAttribute("data-options", "[\"Open\", \"New  Input/Output\"]");
+		el.setAttribute("data-options", "[\"Open\", \"Set SE Controlled Item\"]");
 	};
 	el.setAttribute("this_type", this_type);
 	el.setAttribute("this_id", this_id);

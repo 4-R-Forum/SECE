@@ -27,6 +27,7 @@ PDCA-SE-Editor-2
 - 2.5 refactored show_report method  to support report and sidebar
 - 2.6 checked_out branch PDCA-1.5, new method show_systemreport3 for report using se_editor3.1.js and se_editor.css
 - 2.7 Continue with se_editor3.1.js and se_editor4.1.js
+    - Import error with plm FormComposite ItemType in Form, must be new in CE2024
 
 
 ## CHECK
@@ -42,4 +43,12 @@ PDCA-SE-Editor-2
 - 2.6 report context menu and submenu in correct x,y
     - sidebar using se_editor4.js same result as 2.4
     - I now have versions 3 and 4 of code running side by side, version 3 shows menu and submenu in the correct position but panzoom.js is not working, version 4 still has menu and submenu in the wrong position below the svg, but panzoom.js is working. I suspect panzoom may be causing the issue with version 4. here is panzoom.js. How can I get panzoom working and menus at correct position https://chatgpt.com/c/67ed89a6-99f0-8005-a471-7c7078d12ded
-- 2.7 report, no panzoom; and sidebar working, menu at top: both without debugger
+- 2.7 report: menu, panzoom on hover over node; sidebar menu at bottom, panzoom hover over page
+    - Refresh working without panzoom, double search to add Input/Output why??
+    - Rework data-options apply onserver
+
+## ACT
+    - start with refresh InnovConfig
+    - fix report: menu, panzoom on hover over node; sidebar menu at bottom, panzoom hover over page
+    - Refresh working without panzoom, double search to add Input/Output why??
+    - Rework data-options apply onserver

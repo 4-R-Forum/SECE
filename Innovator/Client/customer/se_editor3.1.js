@@ -11,12 +11,12 @@ function init_contextMenu() {
     const menuItems = document.getElementById("menuItems");
     let currentTarget = null;
 
-    function addInputAction(se_io_id, process_id) {
+    function addInputOutputAction(se_io_id, process_id,add_type) {
         //debugger;
         const a = top.aras;
         let this_process = a.newIOMItem("SE Process");
         this_process.setID([process_id]);
-        let new_input = a.newIOMItem("SE Input","add");
+        let new_input = a.newIOMItem(add_type,"add");
         new_input.setProperty("se_io_id", se_io_id);
         this_process.addRelationship(new_input);
         this_process = this_process.apply("edit");
@@ -89,7 +89,8 @@ function init_contextMenu() {
                 const templ_proc = innovator.getItemById("SE Process",cntxt_item.getProperty('template_id'));        
                 // Select an input from template
                 const source_id = templ_proc.getID();
-                let inputs = a.newIOMItem("SE Input");
+                const add_type = option === "Add Input" ? "SE Input" : "SE Output";
+                let inputs = a.newIOMItem(add_type);
                 inputs.setProperty("source_id",source_id);
                 inputs.setAttribute("select","se_io_id")
                 let inputs_res =inputs.apply("get");
@@ -105,7 +106,7 @@ function init_contextMenu() {
                     const se_io_kn = this_io.getPropertyAttribute("se_io_id","keyed_name");
                     const se_io_id = this_io.getProperty("se_io_id");
                     subLi.textContent =  se_io_kn// keyed_name is a property of items in inputs_res
-                    subLi.addEventListener("click", () => addInputAction(se_io_id, this_id));
+                    subLi.addEventListener("click", () => addInputOutputAction(se_io_id, this_id,add_type));
                     subMenu.appendChild(subLi); // Append sub-menu to "Add Input"
                 };      
                 li.appendChild(subMenu); 
@@ -177,12 +178,50 @@ function init_contextMenu() {
                     new_item.setProperty('system_id',svg_item.getProperty('system_id'));
                     new_item.setProperty('owned_by_id', svg_item.getProperty('owned_by_id'));
                     new_item = new_item.apply('add');
-                    a.uiShowItemEx(new_item.node);                
+                   // a.uiShowItemEx(new_item.node);
+                   if (new_item.isError()) {
+                        a.AlertError(new_item; 
+                    } else { 
+                        a.AlertSuccess("Process for System created."); 
+                    }                
                 }
                 dialog.promise.then(callback);
                 break;  
-            case "New Input/Output":
-                a.newItem("SE Controlled Item");
+            case "Set SE Controlled Item":
+                const add_type = "SE Controlled Item";
+                var params = {
+                    aras: a,
+                    itemtypeName: add_type,
+                    type: 'SearchDialog'
+                };
+                var win = a.getMostTopWindowWithAras(window);
+                var dialog = win.ArasModules.MaximazableDialog.show(
+                    'iframe',
+                    params
+                );              
+                var callback = function() {
+                    //Perform logic using dialog result here
+                    // dialog.returnValue is javacript object with properties item, itemId, keyed_name
+                    // item is an xml Node which the client Aras object uses rather than IOM Item
+                    const seci_id = dialog.returnValue.itemID; // all we need is the ID, its a SECI
+                    // get item clicked in svg from server so that we can add a Property
+                    // this_type and this_id are in scope
+                    // it must exist because it was in the diagram
+                    let svg_item = a.newIOMItem("this_type");
+                    svg_item.setID(this_id);
+                    svg_item.setAttribute('select','id'); // all we need is the id of the input or output
+                    svg_item = svg_item.apply('get');
+                    // edit the svg_item to add the selected seio_id
+                    svg_item.setProperty('seio_id',seci_id);
+                    svg_item = svg_item.apply('edit');
+                   // a.uiShowItemEx(new_item.node);
+                   if (svg_item.isError()) {
+                        a.AlertError(svg_item); 
+                    } else { 
+                        a.AlertSuccess("SE Controlled Item Set."); 
+                    }                
+                }
+                dialog.promise.then(callback);
                 break;                                   
             default:
                 // alert(`Selected: ${option} for ${currentTarget.id}`);

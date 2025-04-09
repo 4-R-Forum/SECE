@@ -5,6 +5,7 @@
     	<dependson name="com.aras.innovator.solution.PLM" />
  	</package>
 	<package name="com.aras.innovator.solution.SA" path="SA\Import">
-			<dependson name="SEH4" />	
+			<dependson name="SEH4" />
 	</package>
+	<package name="com.aras.innovator.solution.PLM"  path="PLM\Import"	/>
 </imports>
