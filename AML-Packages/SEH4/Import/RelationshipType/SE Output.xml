@@ -126,6 +126,19 @@
       <track_history>0</track_history>
       <name>se_io_id</name>
      </Item>
+     <Item type="View" id="EB155B62C7E445C19B5E5413206E56A5" action="add">
+      <client>js</client>
+      <related_id keyed_name="SE Output" type="Form">BFA7B1BC2D2049B7A45B006169C36557</related_id>
+      <role keyed_name="World" type="Identity">
+       <Item type="Identity" action="get" select="id">
+        <name>World</name>
+       </Item>
+      </role>
+      <show_ssvc>0</show_ssvc>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="SE Output" type="ItemType" name="SE Output">84C8F4415BF147A89359BFEB9F58ADB7</source_id>
+      <type>default</type>
+     </Item>
      <Item type="Server Event" id="D6E10ADB8FA04D26850E6936B0F72802" action="add">
       <event_version>version_1</event_version>
       <is_required>0</is_required>
@@ -168,6 +181,4 @@
    </Item>
   </Relationships>
  </Item>
- <Item type="View" action="delete" where="source_id='84C8F4415BF147A89359BFEB9F58ADB7'" />
- <Item type="Form" action="delete" where="name='SE Output'" />
 </AML>

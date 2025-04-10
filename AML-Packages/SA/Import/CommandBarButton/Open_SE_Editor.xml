@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="F9784991367D4AE4B3A9C63EDD88BCA4" action="add">
+  <image>../images/APQPCatalog.svg</image>
+  <image_additional>../images/Markup.svg</image_additional>
+  <label xml:lang="en">SE Editor</label>
+  <on_click_handler keyed_name="show_se_process_report4" type="Method">5FB31395E0C046F8BF473BEDE6BDC585</on_click_handler>
+  <tooltip_template xml:lang="en">SE Editor</tooltip_template>
+  <name>Open_SE_Editor</name>
+ </Item>
+</AML>

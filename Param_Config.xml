@@ -15,4 +15,7 @@
 <param  id="4000" hint="location of first folder containing AML files" varname="aml_path_1">..\..\src\PostProcessing\</param>
 <!--<files1 id="4010">File.xml</files1>-->
 <files1 id="4010">SEH4-DataAdd.xml</files1>
+<files1 id="4020">SetUpJon.xml</files1>
+<files1 id="4030">SEContrItemMorphae.xml</files1>
+<files1 id="4010">LegoBotSystemAdd.xml</files1>
 </config-ps>

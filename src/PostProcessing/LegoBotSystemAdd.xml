@@ -69,7 +69,7 @@
 								<id keyed_name="90AAFB700C4942FD911C651F564294A4" type="sys_SystemElement Structure">90AAFB700C4942FD911C651F564294A4</id>
 								<related_id keyed_name="SE-00000009 MotorController Bracket" type="sys_SystemElement">
 									<Item action="merge" type="sys_SystemElement" typeId="F09A89AEF0F74FA8BD5ED2F822C0E9A7" id="BBCDCA5902BD44409042C1EC9CD842DA">
-										<classification>Component</classification>
+										<classification>Internal System</classification>
 										<config_id keyed_name="SE-00000009 MotorController Bracket" type="sys_SystemElement">BBCDCA5902BD44409042C1EC9CD842DA</config_id>
 										<created_by_id keyed_name="Jon Hodge" type="User">6C893E9809C8411C9C940EE0F7A7E6FF</created_by_id>
 										<created_on>2025-03-10T17:23:12</created_on>

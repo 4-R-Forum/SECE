@@ -1,12 +1,17 @@
 <AML>
-    <Item type="SE Controlled Item" action="edit" id="673CEBC159EA49A9A73FBE2E27FD2A7B">
-    <!-- sys_system-->
+    <Item type="ItemType" id="673CEBC159EA49A9A73FBE2E27FD2A7B" action="edit">
         <Relationships>
-            <Item type="Morphae" action="add">
-                <related_id>265E74E0B4AC4D898D75BB6F1D86C621</related_id>
+            <Item type="Morphae" id="A5E62D5B0CC04232AC7BD8E45E63E79A" action="add">
+                <related_id keyed_name="sys_System" type="ItemType" name="sys_System">
+                    <Item type="ItemType" id="265E74E0B4AC4D898D75BB6F1D86C621" adcion="get" />
+                </related_id>
+                <sort_order>512</sort_order>
             </Item>
-            <Item type="Morphae" action="add">
-                <related_id>F09A89AEF0F74FA8BD5ED2F822C0E9A7</related_id>
+            <Item type="Morphae" id="211C034D2C024AB998DF2082B5554C87" action="add">
+                <related_id keyed_name="sys_SystemElement" type="ItemType" name="sys_SystemElement">
+                    <Item type="ItemType" id="F09A89AEF0F74FA8BD5ED2F822C0E9A7" action= "get"/>
+                </related_id>
+                <sort_order>640</sort_order>
             </Item>
         </Relationships>
     </Item>

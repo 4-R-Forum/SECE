@@ -1,8 +1,7 @@
 ﻿<AML>
  <Item type="Method" id="5FB31395E0C046F8BF473BEDE6BDC585" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
-  <method_code><![CDATA[
-// debugger;
+  <method_code><![CDATA[// debugger;
 const is_report = false;
 
 svgString = thisItem.apply("SystemReportServer").getResult();
@@ -25,11 +24,11 @@ xmlDoc.querySelectorAll(".node").forEach(el => {
 	let this_xid = el.childNodes[0];
 	let this_id = this_xid.textContent.replace("x", "");
 	let this_type = "SE Controlled Item";
-	let seci = thisItem.newItem("SE Controlled Item");
+	let seci = thisItem.newItem("SE Process");
 	seci.setID(this_id);
 	seci.setAttribute("select", "id");
 	let res = seci.apply("get");
-	if (res.isError()) {
+	if (!res.isError()) {
 		this_type = "SE Process";
 		el.setAttribute("data-options", "[\"Open\", \"Add Input\",\"Add Output\",  \"New Process\"]");
 	}
@@ -110,9 +109,7 @@ iframe.onload = function () {
 let viewers = document.getElementById("viewers");
 viewers.appendChild(iframe);
 
-return null;
-
-]]></method_code>
+return null;]]></method_code>
   <method_type>JavaScript</method_type>
   <name>show_se_process_report4</name>
  </Item>

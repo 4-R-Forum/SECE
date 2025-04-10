@@ -1,7 +1,7 @@
 ﻿<AML>
  <Item type="Method" id="5DF482762EA54752B916C15095DBD3BD" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
-  <method_code><![CDATA[
+  <method_code><![CDATA[//debugger;
 var svgString  = this.apply("SystemReportServer").getResult();
 // Parse the string into a DOM structure
 const parser = new DOMParser();
@@ -18,25 +18,38 @@ xmlDoc.querySelectorAll(".graph").forEach(el => {
 
 // Select all elements with the "node" attribute
 xmlDoc.querySelectorAll(".node").forEach(el => {
+		// debugger;
 		// set attributes for se_editor, type, id, options for menu
-		let this_xid = el.childNodes[0];
-		let this_id = this_xid.textContent.replace("x","");
-		let this_type = "SE Controlled Item";
-		let seci = this.newItem("SE Controlled Item");
-		seci.setID(this_id);
-		seci.setAttribute("select","id");
-		let res = seci.apply("get");
-		if (res.isError()) {
-			this_type = "SE Process";
-			el.setAttribute("data-options", "[\"Open\", \"Add Input\",\"Add Output\",  \"New Process\"]");			 
+		let node_title = el.childNodes[0];
+		let node_id = node_title.textContent.replace("x","");
+		let svg_item = this.newItem("SE Process");
+		svg_item.setID(node_id);
+		svg_item.setAttribute("select","id");
+		if (!(svg_item.apply("get").isError())) {
+			el.setAttribute("this_type","SE Process");	
+			el.setAttribute("data-options", "[\"Refresh\",\"Open\", \"Add Input\",\"Add Output\",  \"New Process\"]");			 
+			el.setAttribute("this_id",node_id);
 		} 
 		else {
-			el.setAttribute("data-options", "[\"Open\", \"Set SE Controlled Item\"]");
-		};
-		el.setAttribute("this_type",this_type);
-		el.setAttribute("this_id",this_id);
-});
-
+			//debugger;
+			svg_item.setType("SE Input");
+			svg_item.setID(node_id);
+			if (!(svg_item.apply("get").isError())) {
+				el.setAttribute("this_type","SE Input");	
+				el.setAttribute("data-options", "[\"Refresh\",\"Open\", \"Set SE Controlled Item\"]");			
+				el.setAttribute("this_id",node_id);
+		} 
+			else {
+				svg_item.setType("SE Output");
+				svg_item.setID(node_id);
+				if (!(svg_item.apply("get").isError())) {
+						el.setAttribute("this_type","SE Output");	
+						el.setAttribute("data-options", "[\"Refresh\",\"Open\", \"Set SE Controlled Item\"]");
+						el.setAttribute("this_id",node_id);		
+				} 
+			}
+		};		
+}); // end of forEach(el)
 // Serialize it back to string
 const serializer = new XMLSerializer();
 const newSvgString = serializer.serializeToString(xmlDoc);
@@ -72,8 +85,7 @@ var options ="status=no,toolbar=no,menubar=no,titlebar=yes,resizable=yes,scrollb
 //var myWindow = window.open("", "System Report", options);
 //myWindow.document.write(html);
 //return true;
-return html;
-]]></method_code>
+return html;]]></method_code>
   <method_type>JavaScript</method_type>
   <name>show_se_process_report3</name>
  </Item>

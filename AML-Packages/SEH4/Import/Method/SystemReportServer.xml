@@ -1,8 +1,7 @@
 ﻿<AML>
  <Item type="Method" id="36F4F7B50ECA42BE902B71CB084A3FD7" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
-  <method_code><![CDATA[
-Innovator innov = this.getInnovator();
+  <method_code><![CDATA[Innovator innov = this.getInnovator();
 // step 1, get ids of structure for system
 string this_type = this.getType();
 string system_id;
@@ -51,7 +50,6 @@ aml2 = aml2.Replace(@"{id_list}",id_list);
 //return innov.newResult(aml2);
 Item res2 = innov.applyAML(aml2);
 
-
 // step 3 define nodes and edges for thread diagram, as dot language
 StringBuilder dot = new StringBuilder("");
 // 3.1 create nodes for processes
@@ -62,7 +60,7 @@ for (int i = 0; i < process_nodes.getItemCount(); i++)
     Item this_process = process_nodes.getItemByIndex(i);
     string nickname = "x" + this_process.getID();
     string keyed_name = this_process.getProperty("item_number") + "\r\n" + this_process.getProperty("name");
-    string this_node = $"{nickname}  [shape=box,label=\"{keyed_name}\"];\r\n";
+    string this_node = $"{nickname}  [shape=box,style=filled,fillcolor=chartreuse,label=\"{keyed_name}\"];\r\n";
     dot.Append(this_node);
 }
 // 3.2 create nodes and edges for IO
@@ -84,6 +82,10 @@ for (int i = 0; i < io_nodes.getItemCount(); i++)
     //string name =     this_io.getPropertyItem("se_controlled_item_id").getProperty("name","N/A");
     string source_id = this_io.getProperty("source_id");
     string relationship_id = this_io.getID();
+    //string node_id= relationship_id;
+    string this_node_type = this_io.getType();
+    string this_node_fill = ((String.IsNullOrEmpty(se_controlled_item_id))) ? "lightgray" : "lightblue1";
+    /**/
     string node_id;
     if (String.IsNullOrEmpty(se_controlled_item_id))
     {
@@ -93,10 +95,11 @@ for (int i = 0; i < io_nodes.getItemCount(); i++)
     {
         node_id = se_controlled_item_id;
     }
+    /**/
     //if (System.Diagnostics.Debugger.Launch()) System.Diagnostics.Debugger.Break();
     //string data_options="\"data-options=['Open', 'Add IO', 'New IO']\"";
-    /// TODO replace hard code url in follow'ng with in{fo from server
-    string this_node = $"x{node_id} [shape=parallelogram,label=\"{keyed_name}\r\n{nickname}\r\n{name}\"]\r\n";
+
+    string this_node = $"x{node_id} [shape=parallelogram,style=filled,fillcolor={this_node_fill},label=\"{keyed_name}\r\n{nickname}\r\n{name}\"]\r\n";
  string node_from, node_to;
     node_from = node_to = "";
     if ("SE Output" ==this_io.getType())
@@ -113,13 +116,12 @@ for (int i = 0; i < io_nodes.getItemCount(); i++)
     dot.Append(this_node);
     dot.Append(this_edge);
 }
-string dot_string = "digraph g{rankdir=LR;\r\n" + dot.ToString()  + "}";
+string dot_string = "digraph g{rankdir=TB;bgcolor=azure;\r\n" + dot.ToString()  + "}";
 dot_string = dot_string.Replace("&gt;",">"); // decode right angle bracket
 
 // step 4 return svg for thread diagram
 string body = "<body><dot>" + dot_string +  "</dot></body>";
-return innov.applyMethod("Dot2Svg",body);
-]]></method_code>
+return innov.applyMethod("Dot2Svg",body);]]></method_code>
   <method_type>C#</method_type>
   <name>SystemReportServer</name>
  </Item>

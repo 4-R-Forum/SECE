@@ -1,8 +1,15 @@
 ﻿<AML>
  <Item type="Method" id="A21BDBA04B534B92B3F3B061497617B2" action="add">
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
-  <method_code><![CDATA[
-var svgString  = thisItem.apply("SystemReportServer").getResult();
+  <method_code><![CDATA[debugger;
+let thisItem;
+let is_report;
+if (!thisItem) {
+	thisItem = this;
+	is_report = true;
+}
+else is_report = false;
+svgString  = thisItem.apply("SystemReportServer").getResult();
 // Parse the string into a DOM structure
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(svgString, "image/svg+xml");
@@ -51,8 +58,8 @@ var html = `
 	    <script type='text/javascript'>
 	        setTimeout(init,400);
 	        function init(){
-	        var area = document.getElementById('graph0');
-		      panzoom(area, {autocenter: true, bounds: true});
+	        // var area = document.getElementById('graph0');
+		      // panzoom(area, {autocenter: true, bounds: true});
 					init_contextMenu();
 		    }
 	    </script>
@@ -67,6 +74,7 @@ html += `
 	</body>
 </html>
 `;
+if (is_report) return html;
 let iframe = document.getElementById("se_editor");
 if (iframe) {
     iframe.remove(); // Remove existing iframe before adding a new one
@@ -94,6 +102,7 @@ let observer = new MutationObserver((mutations) => {
 });
 // Observe the "viewers" element for attribute changes
 observer.observe(se_viewers, { attributes: true });
+
 
 // Wait for iframe to load, then write content
 iframe.onload = function() {

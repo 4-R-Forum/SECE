@@ -2,9 +2,9 @@
  <Item type="Report" id="C4CA8834F6DE46F9B8BA4D4921184B42" action="add">
   <label xml:lang="en">System Process Report</label>
   <location>client</location>
-  <method keyed_name="show_se_process_report" type="Method">
+  <method keyed_name="show_se_process_report3" type="Method">
    <Item type="Method" action="get" select="id">
-    <name>show_se_process_report</name>
+    <name>show_se_process_report3</name>
    </Item>
   </method>
   <report_query><![CDATA[<!-- Query in Method -->]]></report_query>
